@@ -1,0 +1,16 @@
+void mouse_callback(GLFWwindow* window, double cursor_x_position, double cursor_y_position)
+{
+    if (firstMouse)
+    {
+        cursor_lastX = cursor_x_position;
+        cursor_lastY = cursor_y_position;
+        firstMouse = false;
+    }
+    
+    GLfloat x_offset = cursor_x_position - cursor_lastX;
+    cursor_lastX = cursor_x_position;
+    GLfloat y_offset = cursor_y_position - cursor_lastY;
+    cursor_lastY = cursor_y_position;
+    
+    camera.processMouseMovement(x_offset, y_offset);
+}
