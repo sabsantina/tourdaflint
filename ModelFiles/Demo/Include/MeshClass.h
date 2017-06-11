@@ -40,7 +40,7 @@ struct Vertex
 {
     glm::vec3 m_position;
     glm::vec3 m_normal;
-    glm::vec3 m_texture_coordinates;
+    glm::vec2 m_texture_coordinates;
     glm::vec3 m_tangent;
     glm::vec3 m_bitangent;
 };
@@ -90,7 +90,7 @@ public:
             stringstream reader;
             string number;
             string texture_name = m_textures[i].m_type;
-            if (texture_name = "texture_diffuse")
+            if (texture_name == "texture_diffuse")
             {
                 reader << diffuseNumber++;//transfer number to stream, then increment
             }
@@ -115,7 +115,7 @@ public:
         }
         
         //draw mesh
-        glBindVertexArray(VAO);
+        glBindVertexArray(this->m_VAO);
         glDrawElements(GL_TRIANGLES, m_indices.size(), GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
         
@@ -125,25 +125,25 @@ public:
     
 private:
     /*Render data*/
-    unsigned int VBO, EBO;
+    unsigned int m_VBO, m_EBO;
     
     /*Functions*/
     //Initializes all the buffer objects/arrays
     void setupMesh()
     {
         //create buffers/arrays
-        glGenVertexArrays(1, &VAO);
-        glGenBuffers(1, &VBO);
-        glGenBuffers(1, &EBO);
+        glGenVertexArrays(1, &m_VAO);
+        glGenBuffers(1, &m_VBO);
+        glGenBuffers(1, &m_EBO);
         
-        glBindVertexArray(VAO);
+        glBindVertexArray(m_VAO);
         //Load data into vertex buffers
-        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        glBindBuffer(GL_ARRAY_BUFFER, m_VBO);
         //A greatg thing about structs is that their memory layout is sequential for all its items.
         //The effect of this is that we can simply pass a pointer to the struct and it translates perfectly to a glm::vec3/2 array (?) which again translates to 3/2 (?) floats which translates to a byte array.
         glBufferData(GL_ARRAY_BUFFER, m_vertices.size() * sizeof(Vertex), &m_vertices[0], GL_STATIC_DRAW);
         
-        GlBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_EBO);
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, m_indices.size() * sizeof(unsigned int), &m_indices[0], GL_STATIC_DRAW);
         
         
@@ -162,7 +162,7 @@ private:
         glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, m_tangent));
         //Vertex bitangent
         glEnableVertexAttribArray(4);
-        glVertexattribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, m_bitangent));
+        glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, m_bitangent));
         
         glBindVertexArray(0);
     }

@@ -40,7 +40,7 @@
 
 using namespace std;
 
-unsigned int TextureFromFile(const char *filepath, const string &directory, bool gamma = false);
+unsigned int textureFromFile(const char *filepath, const string &directory, bool gamma = false);
 
 class Model
 {
@@ -217,7 +217,7 @@ private:
             material->GetTexture(type, i, &str);
             //check if texture was loaded before and if so, continue to next iteration: skip loading a new texture
             bool skip = false;
-            for (unsigned int j = 0; k < this->m_textures_loaded.size(); j++)
+            for (unsigned int j = 0; j < this->m_textures_loaded.size(); j++)
             {
                 if (std::strcmp(m_textures_loaded[j].m_path.C_Str(), str.C_Str()) == 0)
                 {
@@ -229,7 +229,7 @@ private:
             if (!skip)
             {
                 Texture texture;
-                texture.m_id = TextureFromFile(str.C_Str(), this->m_directory);
+                texture.m_id = textureFromFile(str.C_Str(), this->m_directory);
                 texture.m_type = typeName;
                 texture.m_path = str;
                 textures.push_back(texture);
@@ -239,7 +239,7 @@ private:
         return textures;
     }//end function loadMaterialTextures(...)
     
-    unsigned int textureFromFile(const char *path, const string &directory, bool gamma)
+    unsigned int textureFromFile(const char *path, const string &directory, bool gamma = false)
     {
         string filename = string(path);
         filename = m_directory + '/' + filename;
