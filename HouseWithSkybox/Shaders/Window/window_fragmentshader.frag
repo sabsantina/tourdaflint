@@ -5,7 +5,6 @@ in vec3 fragPosition;
 in vec2 outUV;
 
 uniform vec3 object_color;
-uniform sampler2D ground_texture;
 uniform float alpha;
 
 out vec4 color;
@@ -37,11 +36,7 @@ void main()
 
 	resultantColour += (ambient_contribution + diffuse_contribution) * cubeColour;
 	*/
-	
-	vec3 texture_color = vec3(texture(ground_texture, outUV));
-	if(alpha == 1.0f)
-		color = vec4(texture_color,alpha);
-	else
-		color = vec4(texture_color,1.0f)*vec4(object_color, alpha);
+
+	color = vec4(object_color, alpha);
 
 }
