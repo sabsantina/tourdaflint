@@ -1,0 +1,31 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl Milk_White_Glass
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+d 0.750000
+
+newmtl Pale_Gold_Linen_Fabric
+Ka 0.000000 0.000000 0.000000
+Kd 0.650980 0.631373 0.533333
+Ks 0.330000 0.330000 0.330000
+map_Kd livingroom_littletablelight/Pale_Gold_Linen_Fabric.jpg
+
+newmtl _Charcoal_
+Ka 0.000000 0.000000 0.000000
+Kd 0.137255 0.137255 0.137255
+Ks 0.330000 0.330000 0.330000
+
+newmtl black
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+

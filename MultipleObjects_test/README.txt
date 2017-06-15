@@ -1,0 +1,6 @@
+Hey hey! Hope you're well.
+Right, so here's what I managed to do:
+    - I got us a solid 15 objects' files and made sure they were all okay, both normal-wise and otherwise. You just need to set up the filepaths (see tourdaflint > Model Files > Post-Demo), there are a fair number, but we only need to do it once :')
+I ran into a problem after, I wasn't able to properly run the skybox code, for whatever reason. All that would show up on my screen was a dark-blue cloudy-like image. We'll have to take some time later to get to the bottom of the weirdness on my computer together :/ So since I couldn't very well put the furniture into the house I decided to implement some tools for helping you do it, if you choose to work on that today; I got us some some sweet sweet translating, rotating, and scaling functionalities for the model objects. See function MultipleModels_Test::transformModelObject() for how it works. It's straight-forward, you'll see. I also defined a class ModelObject, which is what we'll potentially be using to keep track of all the models in the scene. We make a vector of the class, and each instance corresponds to an object model.
+
+I'll see you when I wake up!

@@ -1,0 +1,32 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _auto_
+Ka 0.000000 0.000000 0.000000
+Kd 0.133333 0.133333 0.133333
+Ks 0.330000 0.330000 0.330000
+
+newmtl _auto_2
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl _auto_5
+Ka 0.000000 0.000000 0.000000
+Kd 0.690196 0.447059 0.254902
+Ks 0.330000 0.330000 0.330000
+map_Kd Nightstand/_auto_5.jpg
+
+newmtl _auto_6
+Ka 0.000000 0.000000 0.000000
+Kd 0.686275 0.447059 0.254902
+Ks 0.330000 0.330000 0.330000
+map_Kd Nightstand/_auto_6.jpg
+
+newmtl _auto_7
+Ka 0.000000 0.000000 0.000000
+Kd 0.686275 0.450980 0.254902
+Ks 0.330000 0.330000 0.330000
+map_Kd Nightstand/_auto_7.jpg
+

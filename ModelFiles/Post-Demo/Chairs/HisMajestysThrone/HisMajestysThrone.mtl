@@ -1,0 +1,27 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl Wood_Plywood_Knots
+Ka 0.000000 0.000000 0.000000
+Kd 0.137255 0.086275 0.050980
+Ks 0.330000 0.330000 0.330000
+
+newmtl m1
+Ka 0.000000 0.000000 0.000000
+Kd 0.192157 0.200000 0.250980
+Ks 0.330000 0.330000 0.330000
+map_Kd HisMajestysThrone/m1.jpg
+
+newmtl m2
+Ka 0.000000 0.000000 0.000000
+Kd 0.192157 0.192157 0.250980
+Ks 0.330000 0.330000 0.330000
+map_Kd HisMajestysThrone/m2.jpg
+
+newmtl prednja_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.266667 0.270588 0.360784
+Ks 0.330000 0.330000 0.330000
+map_Kd HisMajestysThrone/prednja_1.jpg
+

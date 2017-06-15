@@ -1,0 +1,43 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _Wood_Cherry_Original_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.596078 0.337255 0.164706
+Ks 0.330000 0.330000 0.330000
+map_Kd television/_Wood_Cherry_Original_1.jpg
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Metal_Corrogated_Shiny_2
+Ka 0.000000 0.000000 0.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.330000 0.330000 0.330000
+map_Kd television/_Metal_Corrogated_Shiny_2.jpg
+
+newmtl _8
+Ka 0.000000 0.000000 0.000000
+Kd 0.478431 0.478431 0.478431
+Ks 0.330000 0.330000 0.330000
+d 0.500000
+
+newmtl _5
+Ka 0.000000 0.000000 0.000000
+Kd 0.580392 0.580392 0.580392
+Ks 0.330000 0.330000 0.330000
+
+newmtl _4
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Metal_Aluminum_Anodized_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.792157 0.819608 0.858824
+Ks 0.330000 0.330000 0.330000
+map_Kd television/_Metal_Aluminum_Anodized_1.jpg
+

@@ -1,0 +1,36 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl ranjang_kayu2
+Ka 0.000000 0.000000 0.000000
+Kd 0.596078 0.337255 0.164706
+Ks 0.330000 0.330000 0.330000
+map_Kd Bed/ranjang_kayu2.jpg
+
+newmtl ranjang_kayu1
+Ka 0.000000 0.000000 0.000000
+Kd 0.360784 0.113725 0.043137
+Ks 0.330000 0.330000 0.330000
+
+newmtl ranjang_bantal
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl ranjang_selimut
+Ka 0.000000 0.000000 0.000000
+Kd 0.627451 0.517647 0.278431
+Ks 0.330000 0.330000 0.330000
+
+newmtl ranjang_handuk
+Ka 0.000000 0.000000 0.000000
+Kd 0.384314 0.384314 0.321569
+Ks 0.330000 0.330000 0.330000
+map_Kd Bed/ranjang_handuk.jpg
+
