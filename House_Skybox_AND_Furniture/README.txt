@@ -1,5 +1,6 @@
 In short, we now have a fully furnished house. I really went ham on this, man, I swear. Some models were damned hard to find, textures wouldn't load or whatnot, and it took several tries. For... well, several of them. Ugh. Well, I figured it was best to just do it well the first time, so I wasn't able to do more than this for tonight, but it's a good place to be at.
 You're up.
+I wasn’t 100% sure whether or not I modified the ModelObjects class since I last uploaded it to GitHub, so here’s the newest version (along with all my headers), just in case.
 I didn't use any different shaders or whatnot, you really just need to take care of the filepaths with respect to the ObjectModels, but even then it's on tourdaflint, of course, so it'll be easy-peasy :)
 Oh, and this is just a log keeping track of where all the stuff goes. It's in the same order as the SceneObjects enum.
 NOTE: I elected to use the same couch model twice over for the northern and eastern couch; it made more sense to me that the couches be the same, both esthetically and just because who would have two adjacent couches that aren't the same, like that just sounds painful xP
