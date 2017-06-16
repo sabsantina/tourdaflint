@@ -1,0 +1,26 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl White
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+map_Kd black_texture.jpeg
+
+newmtl Inox
+Ka 0.000000 0.000000 0.000000
+Kd 0.709804 0.725490 0.741176
+Ks 0.330000 0.330000 0.330000
+
+
+newmtl lightLampes_Emit_1_5_
+Ka 0.000000 0.000000 0.000000
+Kd 0.996078 0.941176 0.541176
+Ks 0.330000 0.330000 0.330000
+
+newmtl light_blanc_Emit_1_5_
+Ka 0.000000 0.000000 0.000000
+Kd 0.976471 1.000000 0.988235
+Ks 0.330000 0.330000 0.330000
+

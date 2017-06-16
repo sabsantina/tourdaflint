@@ -1,0 +1,688 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl rough_black_plastic
+Ka 0.000000 0.000000 0.000000
+Kd 0.062745 0.062745 0.062745
+Ks 0.330000 0.330000 0.330000
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl Net
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+d 0.930000
+map_Kd Throne2/Net.jpg
+
+newmtl Net1_
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+d 0.930000
+map_Kd Throne2/Net1_.jpg
+
+newmtl Net2_
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+d 0.930000
+map_Kd Throne2/Net2_.jpg
+
+newmtl Net3_
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+d 0.930000
+map_Kd Throne2/Net3_.jpg
+
+newmtl Net4_
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+d 0.930000
+map_Kd Throne2/Net4_.jpg
+
+newmtl Net5_
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+d 0.930000
+map_Kd Throne2/Net5_.jpg
+
+newmtl Net6_
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+d 0.930000
+map_Kd Throne2/Net6_.jpg
+
+newmtl Net7_
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+d 0.930000
+map_Kd Throne2/Net7_.jpg
+
+newmtl basic_white_plastic
+Ka 0.000000 0.000000 0.000000
+Kd 0.854902 0.854902 0.854902
+Ks 0.330000 0.330000 0.330000
+
+newmtl Stainless_Steel_Brushed_
+Ka 0.000000 0.000000 0.000000
+Kd 0.490196 0.490196 0.490196
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Stainless_Steel_Brushed_.png
+
+newmtl Plastic_Black
+Ka 0.000000 0.000000 0.000000
+Kd 0.149020 0.149020 0.149020
+Ks 0.330000 0.330000 0.330000
+
+newmtl rough_white
+Ka 0.000000 0.000000 0.000000
+Kd 0.854902 0.854902 0.854902
+Ks 0.330000 0.330000 0.330000
+
+newmtl Silver
+Ka 0.000000 0.000000 0.000000
+Kd 0.984314 0.972549 0.945098
+Ks 0.330000 0.330000 0.330000
+
+newmtl Rubber_Black
+Ka 0.000000 0.000000 0.000000
+Kd 0.019608 0.019608 0.019608
+Ks 0.330000 0.330000 0.330000
+
+newmtl basic_black_plastic
+Ka 0.000000 0.000000 0.000000
+Kd 0.019608 0.019608 0.019608
+Ks 0.330000 0.330000 0.330000
+
+newmtl Leather_basic__Black_bump
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump.png
+
+newmtl Leather_basic__Black_bump1_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump1_.png
+
+newmtl Leather_basic__Black_bump2_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump2_.png
+
+newmtl Leather_basic__Black_bump3_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump3_.png
+
+newmtl Leather_basic__Black_bump4_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump4_.png
+
+newmtl Leather_basic__Black_bump5_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump5_.png
+
+newmtl Leather_basic__Black_bump6_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump6_.png
+
+newmtl Leather_basic__Black_bump7_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump7_.png
+
+newmtl Leather_basic__Black_bump8_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump8_.png
+
+newmtl Leather_basic__Black_bump9_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump9_.png
+
+newmtl Leather_basic__Black_bump10_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump10_.png
+
+newmtl Leather_basic__Black_bump11_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump11_.png
+
+newmtl Leather_basic__Black_bump12_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump12_.png
+
+newmtl Leather_basic__Black_bump13_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump13_.png
+
+newmtl Leather_basic__Black_bump14_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump14_.png
+
+newmtl Leather_basic__Black_bump15_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump15_.png
+
+newmtl Leather_basic__Black_bump16_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump16_.png
+
+newmtl Leather_basic__Black_bump17_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump17_.png
+
+newmtl Leather_basic__Black_bump18_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump18_.png
+
+newmtl Leather_basic__Black_bump19_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump19_.png
+
+newmtl Leather_basic__Black_bump20_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump20_.png
+
+newmtl Leather_basic__Black_bump21_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump21_.png
+
+newmtl Leather_basic__Black_bump22_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump22_.png
+
+newmtl Leather_basic__Black_bump23_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump23_.png
+
+newmtl Leather_basic__Black_bump24_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump24_.png
+
+newmtl Leather_basic__Black_bump25_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump25_.png
+
+newmtl Leather_basic__Black_bump26_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump26_.png
+
+newmtl Leather_basic__Black_bump27_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump27_.png
+
+newmtl Leather_basic__Black_bump28_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump28_.png
+
+newmtl Leather_basic__Black_bump29_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump29_.png
+
+newmtl Leather_basic__Black_bump30_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump30_.png
+
+newmtl Leather_basic__Black_bump31_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump31_.png
+
+newmtl Leather_basic__Black_bump32_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump32_.png
+
+newmtl Leather_basic__Black_bump33_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump33_.png
+
+newmtl Leather_basic__Black_bump34_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump34_.png
+
+newmtl Leather_basic__Black_bump35_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump35_.png
+
+newmtl Leather_basic__Black_bump36_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump36_.png
+
+newmtl Leather_basic__Black_bump37_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump37_.png
+
+newmtl Leather_basic__Black_bump38_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump38_.png
+
+newmtl Leather_basic__Black_bump39_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump39_.png
+
+newmtl Leather_basic__Black_bump40_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump40_.png
+
+newmtl Leather_basic__Black_bump41_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump41_.png
+
+newmtl Leather_basic__Black_bump42_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump42_.png
+
+newmtl Leather_basic__Black_bump43_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump43_.png
+
+newmtl Leather_basic__Black_bump44_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump44_.png
+
+newmtl Leather_basic__Black_bump45_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump45_.png
+
+newmtl Leather_basic__Black_bump46_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump46_.png
+
+newmtl Leather_basic__Black_bump47_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump47_.png
+
+newmtl Leather_basic__Black_bump48_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump48_.png
+
+newmtl Leather_basic__Black_bump49_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump49_.png
+
+newmtl Leather_basic__Black_bump50_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump50_.png
+
+newmtl Leather_basic__Black_bump51_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump51_.png
+
+newmtl Leather_basic__Black_bump52_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump52_.png
+
+newmtl Leather_basic__Black_bump53_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump53_.png
+
+newmtl Leather_basic__Black_bump54_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump54_.png
+
+newmtl Leather_basic__Black_bump55_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump55_.png
+
+newmtl Leather_basic__Black_bump56_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump56_.png
+
+newmtl Leather_basic__Black_bump57_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump57_.png
+
+newmtl Leather_basic__Black_bump58_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump58_.png
+
+newmtl Leather_basic__Black_bump59_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump59_.png
+
+newmtl Leather_basic__Black_bump60_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump60_.png
+
+newmtl Leather_basic__Black_bump61_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump61_.png
+
+newmtl Leather_basic__Black_bump62_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump62_.png
+
+newmtl Leather_basic__Black_bump63_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump63_.png
+
+newmtl Leather_basic__Black_bump64_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump64_.png
+
+newmtl Leather_basic__Black_bump65_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump65_.png
+
+newmtl Leather_basic__Black_bump66_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump66_.png
+
+newmtl Leather_basic__Black_bump67_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump67_.png
+
+newmtl Leather_basic__Black_bump68_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump68_.png
+
+newmtl Leather_basic__Black_bump69_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump69_.png
+
+newmtl Leather_basic__Black_bump70_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump70_.png
+
+newmtl Leather_basic__Black_bump71_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump71_.png
+
+newmtl Leather_basic__Black_bump72_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump72_.png
+
+newmtl Leather_basic__Black_bump73_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump73_.png
+
+newmtl Leather_basic__Black_bump74_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump74_.png
+
+newmtl Leather_basic__Black_bump75_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump75_.png
+
+newmtl Leather_basic__Black_bump76_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump76_.png
+
+newmtl Leather_basic__Black_bump77_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump77_.png
+
+newmtl Leather_basic__Black_bump78_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump78_.png
+
+newmtl Leather_basic__Black_bump79_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump79_.png
+
+newmtl Leather_basic__Black_bump80_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump80_.png
+
+newmtl Leather_basic__Black_bump81_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump81_.png
+
+newmtl Leather_basic__Black_bump82_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump82_.png
+
+newmtl Leather_basic__Black_bump83_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump83_.png
+
+newmtl Leather_basic__Black_bump84_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump84_.png
+
+newmtl Leather_basic__Black_bump85_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump85_.png
+
+newmtl Leather_basic__Black_bump86_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump86_.png
+
+newmtl Leather_basic__Black_bump87_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump87_.png
+
+newmtl Leather_basic__Black_bump88_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump88_.png
+
+newmtl Leather_basic__Black_bump89_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump89_.png
+
+newmtl Leather_basic__Black_bump90_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump90_.png
+
+newmtl Leather_basic__Black_bump91_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump91_.png
+
+newmtl Leather_basic__Black_bump92_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump92_.png
+
+newmtl Leather_basic__Black_bump93_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump93_.png
+
+newmtl Leather_basic__Black_bump94_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump94_.png
+
+newmtl Leather_basic__Black_bump95_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump95_.png
+
+newmtl Leather_basic__Black_bump96_
+Ka 0.000000 0.000000 0.000000
+Kd 0.070588 0.058824 0.054902
+Ks 0.330000 0.330000 0.330000
+map_Kd Throne2/Leather_basic__Black_bump96_.png
+

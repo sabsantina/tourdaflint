@@ -1,0 +1,67 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl mac_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.831373 0.835294 0.843137
+Ks 0.330000 0.330000 0.330000
+map_Kd OfficeDesktop_3/mac_1.jpg
+
+newmtl mac
+Ka 0.000000 0.000000 0.000000
+Kd 0.639216 0.572549 0.654902
+Ks 0.330000 0.330000 0.330000
+map_Kd OfficeDesktop_3/mac.jpg
+
+newmtl mac_2
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+map_Kd OfficeDesktop_3/mac_2.jpg
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Metal_Corrogated_Shiny_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.330000 0.330000 0.330000
+map_Kd OfficeDesktop_3/_Metal_Corrogated_Shiny_1.jpg
+
+newmtl mac_keyboard
+Ka 0.000000 0.000000 0.000000
+Kd 0.933333 0.937255 0.941176
+Ks 0.330000 0.330000 0.330000
+map_Kd OfficeDesktop_3/mac_keyboard.jpg
+
+newmtl halogen
+Ka 0.000000 0.000000 0.000000
+Kd 0.862745 0.847059 0.847059
+Ks 0.330000 0.330000 0.330000
+map_Kd OfficeDesktop_3/halogen.jpg
+
+newmtl tv_stand_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.784314 0.788235 0.764706
+Ks 0.330000 0.330000 0.330000
+map_Kd OfficeDesktop_3/tv_stand_1.jpg
+
+newmtl _Metal_Aluminum_Anodized_3
+Ka 0.000000 0.000000 0.000000
+Kd 0.792157 0.819608 0.858824
+Ks 0.330000 0.330000 0.330000
+map_Kd OfficeDesktop_3/_Metal_Aluminum_Anodized_3.jpg
+
+newmtl Color_A16
+Ka 0.000000 0.000000 0.000000
+Kd 0.400000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl Color_008
+Ka 0.000000 0.000000 0.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.330000 0.330000 0.330000
+

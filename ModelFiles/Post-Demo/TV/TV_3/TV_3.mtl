@@ -1,0 +1,20 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _DimGray_
+Ka 0.000000 0.000000 0.000000
+Kd 0.411765 0.411765 0.411765
+Ks 0.330000 0.330000 0.330000
+
+newmtl trainspotting
+Ka 0.000000 0.000000 0.000000
+Kd 0.490196 0.509804 0.427451
+Ks 0.330000 0.330000 0.330000
+map_Kd TV_3/trainspotting.jpg
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
