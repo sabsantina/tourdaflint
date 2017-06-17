@@ -1,0 +1,73 @@
+ALL OF THIS HAS TO TAKE PLACE AFTER INITIALIZATION OF OBJECTS
+for each mesh
+    find minimum x
+    find minimum y
+    find minimum z
+    assign to model.m_smallest_values_vector glm::vec3
+    find maximum x
+    find maximum y
+    find maximum z
+    assign to model.m_greatest_values_vector glm::vec3
+for each model
+    find minimum x from all elements in m_smallest_values_vector glm::vec3
+    assign to model.m_x_min
+    find minimum x from all elements in m_smallest_values_vector glm::vec3
+    
+    ***I NEED HELP WITH THIS, I DON'T KNOW HOW THIS WORKS
+then, transform to world coordinates - multiply with model matrix (is this really how? to be determined)
+So look, I made everything we need for the bounded box, but I'm not 100% sure I'm converting things to world coordinates properly.
+    
+    ***Done
+DEFINE BOUNDING BOX class and assign an instance for each object    
+Cube vertices ("mesh" for each object):
+    x_min, y_min, z_max,
+    x_min, y_min, z_min,
+    x_max, y_min, z_max,
+    x_max, y_min, z_min,
+    x_min, y_max, z_max,
+    x_min, y_max, z_min,
+    x_max, y_max, z_max,
+    x_max, y_max, z_min
+
+***Done
+for user selection:
+    if the interact button is pressed AND the dot product of the camera direction (camera.m_forward) and (the vector target - camera.m_position) is [-0.05, 0.05] <-- we can make this adjustable, if need be 
+    AND the target is 5 units (adjustable if need be) or less away from the user
+    THEN the target is the object in question
+    HOWEVER if there are more than one that fit the above criteria, then filter through depth (queue)
+    
+for collision: <--NOT YET IMPLEMENTED
+    forget about displacing the objects, just halt user movement if they walk into anything
+
+Define camera states TESTING and NTESTING wherein in one we can modify the height and in the other we can't, respectively
+
+Worst-case scenario for lights:
+    press 1, 2, 3 for each respective light on/off
+Best-case scenario (we're totally not doing this, but whatevs):
+    interact with light switch (if we have time)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    **the following is me talking to myself, don't mind it.
+    Look, the problem with this local/world coordinate thing is that take for example the two chairs in the kitchen, right? You take the western-most one and move it into where the eastern-most one is and you'll find that despite being in exactly the same place, they've got different coordinates. Of course, this means that the notion of position is a completely relative and subjective thing to our objects right now, which is why we need to introduce the m_position_WORLDCOORDINATES in order to be able to do stuff like collision or user selection; because such features depend on the location of other objects in order to work (which requires, by implication, that every object use the same system of position for location). We therefore need our world coordinates.
+    
+    Sweet Jesus, I identified a pretty big problem. The thing is, when we export from SketchUp, that's what the local coordinates are coming from. In other words, if the model's nestled right at the center of the origin, (0, 0, 0), then that's where the object's origin will be when we try to rotate it. That's why there were such offsets in some of the models' movements: I was just exporting the object models haphazardly, not knowing that their positioning was relevant and that the origin was off. Fuck.
+    
+    Alright, well that's that fixed. I never want to see another fridge, I swear. I had to replace pretty much every model in the scene since I hadn't kept track of the last objects; had to find some new ones in some cases (and I saved the SketchUp files this time, as we can't import OBJ files) to properly align it with its own local origin. Stuff should be much easier than it would've been otherwise. So, with respect to what's next; lighting and collision.
+    User selection has been implemented, but it requires collision with respect to the objects; they need to have collision for each other and the walls. The bounded box was implemented last night too, see the ModelObject class.
+    
+    
+    
+    
+    
+    
+    

@@ -6,8 +6,7 @@ newmtl Wood_Veneer_01
 Ka 0.000000 0.000000 0.000000
 Kd 0.470588 0.274510 0.145098
 Ks 0.330000 0.330000 0.330000
-map_Kd kitchen_diningchairs/grunge-texture-18536.jpg
-
+map_Kd kitchen_diningchairs/grunge-texture-18536.jpeg
 
 newmtl FrontColor
 Ka 0.000000 0.000000 0.000000

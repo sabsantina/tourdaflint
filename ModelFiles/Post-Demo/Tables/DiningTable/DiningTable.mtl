@@ -2,14 +2,15 @@
 ## Alias OBJ Material File
 # Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
 
-newmtl _Wood_Cherry_Original_1
+newmtl _Color_000_1
 Ka 0.000000 0.000000 0.000000
-Kd 0.596078 0.337255 0.164706
+Kd 0.447059 0.305882 0.125490
 Ks 0.330000 0.330000 0.330000
-map_Kd DiningTable/_Wood_Cherry_Original_1.jpg
+map_Kd DiningTable/_Color_000_1.jpg
 
-newmtl FrontColor
+newmtl Color_000
 Ka 0.000000 0.000000 0.000000
-Kd 1.000000 1.000000 1.000000
+Kd 0.470588 0.294118 0.066667
 Ks 0.330000 0.330000 0.330000
+map_Kd DiningTable/Color_000.jpg
 

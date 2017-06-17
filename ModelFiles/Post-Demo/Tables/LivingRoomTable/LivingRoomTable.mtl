@@ -2,26 +2,15 @@
 ## Alias OBJ Material File
 # Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
 
-newmtl Color_000
+newmtl FrontColor
 Ka 0.000000 0.000000 0.000000
-Kd 0.533333 0.549020 0.501961
-Ks 0.330000 0.330000 0.330000
-
-newmtl Magazine02
-Ka 0.000000 0.000000 0.000000
-Kd 0.850980 0.807843 0.815686
-Ks 0.330000 0.330000 0.330000
-map_Kd LivingRoomTable/Magazine02.jpg
-
-newmtl Magazine01
-Ka 0.000000 0.000000 0.000000
-Kd 0.596078 0.443137 0.317647
-Ks 0.330000 0.330000 0.330000
-map_Kd LivingRoomTable/Magazine01.jpg
-
-newmtl _2
-Ka 0.000000 0.000000 0.000000
-Kd 0.458824 0.439216 0.431373
+Kd 1.000000 1.000000 1.000000
 Ks 0.330000 0.330000 0.330000
 map_Kd LivingRoomTable/_2.jpg
+
+newmtl Chocolate_Oak_Veneer
+Ka 0.000000 0.000000 0.000000
+Kd 0.298039 0.168627 0.082353
+Ks 0.330000 0.330000 0.330000
+map_Kd LivingRoomTable/Chocolate_Oak_Veneer.jpg
 

@@ -2,11 +2,11 @@
 ## Alias OBJ Material File
 # Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
 
-newmtl _Wood_Bamboo_Medium_2
+newmtl _Wood_Bamboo_Medium_1
 Ka 0.000000 0.000000 0.000000
 Kd 0.498039 0.294118 0.117647
 Ks 0.330000 0.330000 0.330000
-map_Kd LivingRoomLittleTable_2/_Wood_Bamboo_Medium_2.jpg
+map_Kd LivingRoomLittleTable_2/_Wood_Bamboo_Medium_1.jpg
 
 newmtl FrontColor
 Ka 0.000000 0.000000 0.000000

@@ -2,19 +2,48 @@
 ## Alias OBJ Material File
 # Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
 
-newmtl Stainless_Steel
+newmtl _Beige_1
 Ka 0.000000 0.000000 0.000000
-Kd 0.752941 0.752941 0.752941
+Kd 0.827451 0.741176 0.564706
 Ks 0.330000 0.330000 0.330000
-map_Kd Fridge_4/Stainless_Steel.jpg
+map_Kd Fridge_4/beige.jpeg
 
-newmtl _22
+newmtl black
 Ka 0.000000 0.000000 0.000000
-Kd 0.094118 0.094118 0.094118
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+map_Kd Fridge_4/black.jpeg
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
 Ks 0.330000 0.330000 0.330000
 
-newmtl _23
+newmtl Color_001
 Ka 0.000000 0.000000 0.000000
-Kd 0.600000 0.600000 0.600000
+Kd 0.886275 0.886275 0.886275
 Ks 0.330000 0.330000 0.330000
+
+newmtl Color_000
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Wood_Cherry_Original__copy
+Ka 0.000000 0.000000 0.000000
+Kd 0.596078 0.337255 0.164706
+Ks 0.330000 0.330000 0.330000
+map_Kd Fridge_4/_Wood_Cherry_Original__copy.jpg
+
+newmtl Metal_Aluminum_Anodized
+Ka 0.000000 0.000000 0.000000
+Kd 0.792157 0.819608 0.858824
+Ks 0.330000 0.330000 0.330000
+map_Kd Fridge_4/Metal_Aluminum_Anodized.jpg
+
+newmtl _Wood__Floor__copy
+Ka 0.000000 0.000000 0.000000
+Kd 0.607843 0.411765 0.239216
+Ks 0.330000 0.330000 0.330000
+map_Kd Fridge_4/_Wood__Floor__copy.jpg
 
