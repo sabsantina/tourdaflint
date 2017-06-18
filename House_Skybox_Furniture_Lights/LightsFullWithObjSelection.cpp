@@ -100,7 +100,6 @@ bool user_is_transforming = false;
 
 //Filepaths
 #ifdef SABIN
-//Shader paths
 const GLchar
 *filepath_shader_wall_vertexshader = "Shaders/Walls/walls_vertexshader.vs",
 *filepath_shader_wall_fragmentshader = "Shaders/Walls/walls_fragmentshader.frag",
@@ -114,65 +113,9 @@ const GLchar
 *filepath_shader_window_fragmentshader = "Shaders/Window/window_fragmentshader.frag",
 *filepath_shader_lamp_vertexshader = "Shaders/Lamp/lamp_vertexshader.vs",
 *filepath_shader_lamp_fragmentshader = "Shaders/Lamp/lamp_fragmentshader.frag";
-
-
-//Object paths
-enum SceneObjects
-{
-	BED = 0, BEDROOM_NIGHTSTAND = 1, BEDROOM_CHAIR = 2, BEDROOM_DESKTOP = 3, BEDROOM_DRESSER = 4, BEDROOM_DESK_LAMP = 5, LIVINGROOM_COFFEETABLE = 6, LIVINGROOM_COUCH_EAST = 7, LIVINGROOM_COUCH_NORTH = 8, LIVINGROOM_LITTLETABLE = 9, LIVINGROOM_TELEVISION = 10, LIVINGROOM_TABLELIGHT = 11, KITCHEN_STOVE_SINK_DISHWASHER = 12, KITCHEN_FRIDGE = 13, KITCHEN_LAMP = 14, LIVINGROOM_RUG = 15, BEDROOM_RUG = 16, KITCHEN_DINING_TABLE = 17, KITCHEN_CHAIR_WEST = 18, KITCHEN_CHAIR_EAST = 19
-};
-vector<ModelObject> scene_objects; //VECTOR OF ALL MODEL OBJECTS!
-
-								   //Object paths
 const GLchar
-//Model for the house's exterior as a whole
 *filepath_object_cube = "Models/cube/cube.obj",
-/*      BEDROOM         */
-//Model for bed in bedroom
-*filepath_object_bedroom_bed = "Models/Bed/Bed.obj",
-//Model for nightstand in bedroom
-*filepath_object_bedroom_nightstand = "Models/Tables/Nightstand/Nightstand.obj",
-//Model for chair in bedroom
-*filepath_object_bedroom_chair = "Models/Chairs/Throne3/Throne3.obj",
-//Model for table/shelf with computer in bedroom
-*filepath_object_bedroom_desktop = "Models/Tables/Desk_Construction/Desk/Desk.obj",
-//Model for dresser in bedroom
-*filepath_object_bedroom_dresser = "Models/Shelves/Dresser_2/Dresser_2.obj",
-//Model for desklamp in bedroom
-*filepath_object_bedroom_desklamp = "Models/Lights/bedroom/desklamp/desklamp.obj",
-/*    LIVING ROOM       */
-//Model for coffee table in living room
-*filepath_object_livingroom_coffeetable = "Models/Tables/LivingRoomTable/LivingRoomTable.obj",
-//Model for "eastern"-most couch in living room
-*filepath_object_livingroom_couch_east = "Models/Chairs/Sofa/Sofa.obj",
-//Model for couch slightly "north" of preceding model in living room (why am I using two different couches? xD Let's just use the same couch model twice, it makes much more sense, in every way)
-*filepath_object_livingroom_couch_north = "Models/Chairs/Sofa/Sofa.obj",
-//Model for nightstand-like little table in between the two couches
-*filepath_object_livingroom_littletable = "Models/Tables/LivingRoomLittleTable_2/LivingRoomLittleTable_2.obj",
-//Model for living room television
-*filepath_object_livingroom_television = "Models/TV/TV_4/TV_4.obj",
-//Model for living room light (on little table to "north-east")
-*filepath_object_livingroom_tablelight = "Models/Lights/livingroom/livingroom_littletablelight.obj",
-/*      KITCHEN         */
-//Model for dish washer, stove, and sink in kitchen (comes with shelves above the sink (this model needs to be mounted to the wall))
-*filepath_object_kitchen_sink_stove_dishwasher = "Models/Kitchen/Fridge_4/Fridge_4.obj",
-//Model for kitchen fridge
-*filepath_object_kitchen_fridge = "Models/Kitchen/Fridge_4/Fridge_4.obj",
-//Model for kitchen light
-*filepath_object_kitchen_light = "Models/Lights/kitchen_lights/kitchen_light4/kitchen_light4.obj",
-//Model for living room rug
-*filepath_object_livingroom_rug = "Models/Rugs/bedroom_rug/bedroom_rug.obj",
-//Model for bedroom rug
-*filepath_object_bedroom_rug = "Models/Rugs/bedroom_rug/bedroom_rug.obj",
-//Model for kitchen dining table
-*filepath_object_kitchen_diningtable = "Models/Tables/DiningTable/DiningTable.obj",
-//Model for kitchen dining chair
-*filepath_object_kitchen_diningchair_west = "Models/Chairs/Kitchen_diningchairs/kitchen_diningchairs.obj",
-//Model for kitchen dining chair
-*filepath_object_kitchen_diningchair_east = "Models/Chairs/Kitchen_diningchairs/kitchen_diningchairs.obj";
-
-//const GLchar
-//*filepath_object_shelf1 = "Models/nanosuit/nanosuit.obj";
+*filepath_object_shelf1 = "Models/nanosuit/nanosuit.obj";
 
 const GLchar
 *filepath_texture_skybox_right = "Textures/SkyBox/right.jpg",
@@ -182,14 +125,13 @@ const GLchar
 *filepath_texture_skybox_back = "Textures/SkyBox/back.jpg",
 *filepath_texture_skybox_front = "Textures/SkyBox/front.jpg",
 *filepath_texture_floor = "Textures/floor.jpg",
-*filepath_texture_ceiling = "Textures/ceiling.jpg",
+*filepath_texture_ceiling = "Textures/ceiling.jpg";
 *filepath_texture_wall = "Textures/wall2.jpg";
 
-
 /*
-
-Define your filepaths here, please (sorry if it's a bother :') )
-*/
+ 
+ Define your filepaths here, please (sorry if it's a bother :') )
+ */
 #endif
 #ifdef JACQUES
 //Shader paths
@@ -205,16 +147,18 @@ const GLchar
 *filepath_shader_window_fragmentshader = "/Users/Jacques/tourdaflint/HouseWithSkybox/Shaders/Window/window_fragmentshader.frag",
 *filepath_shader_obj_shelf_vertexshader = "/Users/Jacques/Desktop/Concordia/Concordia Notes/Session Summer 2017 1/COMP 371/Files/OpenGLWorkspace/Shaders/FinalProject/Obj/shelf1_vertexshader.vs",
 *filepath_shader_obj_shelf_fragmentshader = "/Users/Jacques/Desktop/Concordia/Concordia Notes/Session Summer 2017 1/COMP 371/Files/OpenGLWorkspace/Shaders/FinalProject/Obj/shelf1_fragmentshader.frag";
+//*filepath_shader_lamp_vertexshader = "Shaders/Lamp/lamp_vertexshader.vs",
+//*filepath_shader_lamp_fragmentshader = "Shaders/Lamp/lamp_fragmentshader.frag";
 
 //Object paths
 //The purpose of this enum is just so we're able to know which object is represented by some index in the scene_objects vector. Of course, we need to ensure that upon initialization this order is respected such that the scene model object at scene_objects[BED] be the Bed object model and the scene model object at scene_objects[KITCHEN_LAMP] be the kitchen lamp, and so forth.
 enum SceneObjects
 {
-	BED = 0, BEDROOM_NIGHTSTAND = 1, BEDROOM_CHAIR = 2, BEDROOM_DESKTOP = 3, BEDROOM_DRESSER = 4, BEDROOM_DESK_LAMP = 5, LIVINGROOM_COFFEETABLE = 6, LIVINGROOM_COUCH_EAST = 7, LIVINGROOM_COUCH_NORTH = 8, LIVINGROOM_LITTLETABLE = 9, LIVINGROOM_TELEVISION = 10, LIVINGROOM_TABLELIGHT = 11, KITCHEN_STOVE_SINK_DISHWASHER = 12, KITCHEN_FRIDGE = 13, KITCHEN_LAMP = 14, LIVINGROOM_RUG = 15, BEDROOM_RUG = 16, KITCHEN_DINING_TABLE = 17, KITCHEN_CHAIR_WEST = 18, KITCHEN_CHAIR_EAST = 19
+    BED = 0, BEDROOM_NIGHTSTAND = 1, BEDROOM_CHAIR = 2, BEDROOM_DESKTOP = 3, BEDROOM_DRESSER = 4, BEDROOM_DESK_LAMP = 5, LIVINGROOM_COFFEETABLE = 6, LIVINGROOM_COUCH_EAST = 7, LIVINGROOM_COUCH_NORTH = 8, LIVINGROOM_LITTLETABLE = 9, LIVINGROOM_TELEVISION = 10, LIVINGROOM_TABLELIGHT = 11, KITCHEN_STOVE_SINK_DISHWASHER = 12, KITCHEN_FRIDGE = 13, KITCHEN_LAMP = 14, LIVINGROOM_RUG = 15, BEDROOM_RUG = 16, KITCHEN_DINING_TABLE = 17, KITCHEN_CHAIR_WEST = 18, KITCHEN_CHAIR_EAST = 19
 };
 vector<ModelObject> scene_objects; //VECTOR OF ALL MODEL OBJECTS!
 
-								   //Object paths
+//Object paths
 const GLchar
 //Model for the house's exterior as a whole
 *filepath_object_cube = "/Users/Jacques/tourdaflint/ModelFiles/Post-Demo/Cube/cube.obj",
@@ -235,13 +179,13 @@ const GLchar
 //Model for coffee table in living room
 *filepath_object_livingroom_coffeetable = "/Users/Jacques/tourdaflint/ModelFiles/Post-Demo/Tables/LivingRoomTable/LivingRoomTable.obj",
 //Model for "eastern"-most couch in living room
-*filepath_object_livingroom_couch_east = "/Users/Jacques/tourdaflint/ModelFiles/Post-Demo/Chairs/Sofa/Sofa.obj",
+*filepath_object_livingroom_couch_east = "/Users/Jacques/tourdaflint/ModelFiles/Post-Demo/Chairs/Sofa_2/Sofa_2.obj",
 //Model for couch slightly "north" of preceding model in living room (why am I using two different couches? xD Let's just use the same couch model twice, it makes much more sense, in every way)
-*filepath_object_livingroom_couch_north = "/Users/Jacques/tourdaflint/ModelFiles/Post-Demo/Chairs/Sofa/Sofa.obj",
+*filepath_object_livingroom_couch_north = "/Users/Jacques/tourdaflint/ModelFiles/Post-Demo/Chairs/Sofa_2/Sofa_2.obj",
 //Model for nightstand-like little table in between the two couches
 *filepath_object_livingroom_littletable = "/Users/Jacques/tourdaflint/ModelFiles/Post-Demo/Tables/LivingRoomLittleTable_2/LivingRoomLittleTable_2.obj",
 //Model for living room television
-*filepath_object_livingroom_television = "/Users/Jacques/tourdaflint/ModelFiles/Post-Demo/TV/TV_4/TV_4.obj",
+*filepath_object_livingroom_television = "/Users/Jacques/tourdaflint/ModelFiles/Post-Demo/TV/TV_5/TV_5.obj",
 //Model for living room light (on little table to "north-east")
 *filepath_object_livingroom_tablelight = "/Users/Jacques/tourdaflint/ModelFiles/Post-Demo/Lights/livingroom/livingroom_littletablelight.obj",
 /*      KITCHEN         */
@@ -273,11 +217,9 @@ const GLchar
 *filepath_texture_skybox_back = "/Users/Jacques/Desktop/Concordia/Concordia Notes/Session Summer 2017 1/COMP 371/Files/HouseWithSkybox/Textures/SkyBox/back.jpg",
 *filepath_texture_skybox_front = "/Users/Jacques/Desktop/Concordia/Concordia Notes/Session Summer 2017 1/COMP 371/Files/HouseWithSkybox/Textures/SkyBox/front.jpg",
 *filepath_texture_floor = "/Users/Jacques/tourdaflint/HouseWithSkybox/Textures/floor.jpg",
-*filepath_texture_ceiling = "/Users/Jacques/tourdaflint/HouseWithSkybox/Textures/ceiling.jpg",
+*filepath_texture_ceiling = "/Users/Jacques/tourdaflint/HouseWithSkybox/Textures/ceiling.jpg";
 //*filepath_texture_wall = "Textures/wall2.jpg";
-
 #endif
-
 
 //Camera
 
@@ -405,8 +347,8 @@ int main()
 
 	//Initialize light positions
 	firstLightPos = scene_objects[KITCHEN_LAMP].m_position + glm::vec3(0.2f, 0.3f, -3.9f);
-	secondLightPos = scene_objects[LIVINGROOM_TABLELIGHT].m_position + glm::vec3(7.5f,1.5f,-2.5f);
-	thirdLightPos = scene_objects[BEDROOM_DESK_LAMP].m_position + glm::vec3(0.9f, 1.4f, -0.2f);
+	secondLightPos = scene_objects[LIVINGROOM_TABLELIGHT].m_position +glm::vec3(0.0f, 0.2f, 0.0f);
+	thirdLightPos = scene_objects[BEDROOM_DESK_LAMP].m_position + glm::vec3(0.9f, 1.4f, -0.3f);
 
 	float halfSize = 30.0f;
 
@@ -861,7 +803,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 
 }
 
-bool wall_collision(glm::vec3 newCamPos) 
+bool wall_collision(glm::vec3 newCamPos)
 {
 	//If go past north and south outer walls
 	if (newCamPos.x <= 0.0f || newCamPos.x >= HOUSE_SIZE)
@@ -869,18 +811,18 @@ bool wall_collision(glm::vec3 newCamPos)
 	//If go past east and west outer walls
 	if (newCamPos.z <= 0.0f || newCamPos.z >= HOUSE_SIZE)
 		return true;
-	if (newCamPos.z > ((HOUSE_SIZE - WALL_WIDTH)/ 2.0f) && newCamPos.z < ((HOUSE_SIZE + WALL_WIDTH)) / 2.0f)
+	if (newCamPos.z > ((HOUSE_SIZE - WALL_WIDTH) / 2.0f) && newCamPos.z < ((HOUSE_SIZE + WALL_WIDTH)) / 2.0f)
 	{
 		if (newCamPos.x > 0 && newCamPos.x < (HOUSE_SIZE - (DOOR_WIDTH + 3.0f)))
 			return true;
-		else if (newCamPos.x > (HOUSE_SIZE - 3.0f) && newCamPos.x < HOUSE_SIZE)
+		if (newCamPos.x > (HOUSE_SIZE - 3.0f) && newCamPos.x < HOUSE_SIZE)
 			return true;
 	}
-	if (newCamPos.x > ((HOUSE_SIZE - WALL_WIDTH) / 2.0f) && newCamPos.x < ((HOUSE_SIZE + WALL_WIDTH) / 2.0f))
+	if (newCamPos.x >((HOUSE_SIZE - WALL_WIDTH) / 2.0f) && newCamPos.x < ((HOUSE_SIZE + WALL_WIDTH) / 2.0f))
 	{
-		if (newCamPos.z > 0 && newCamPos.z < (HOUSE_SIZE/2.0f - (3.0f + DOOR_WIDTH)))
+		if (newCamPos.z > 0 && newCamPos.z < (HOUSE_SIZE / 2.0f - (3.0f + DOOR_WIDTH)))
 			return true;
-		else if (newCamPos.z >(HOUSE_SIZE / 2.0f + DOOR_WIDTH) && newCamPos.z < HOUSE_SIZE/2.0f)
+		if (newCamPos.z >(HOUSE_SIZE / 2.0f + DOOR_WIDTH) && newCamPos.z < HOUSE_SIZE / 2.0f)
 			return true;
 	}
 	return false;
@@ -888,20 +830,18 @@ bool wall_collision(glm::vec3 newCamPos)
 
 Camera_Movement check_movement(Camera_Movement direction)
 {
+	glm::vec3 newCameraPos = camera.m_position_point + camera.m_front_vector * camera.m_movement_speed * deltaTime;
 	if (direction == FORWARD)
 	{
-		glm::vec3 newCameraPos = camera.m_position_point + camera.m_front_vector * camera.m_movement_speed * deltaTime;
-		
 		if (wall_collision(newCameraPos))
 			return BACKWARD;
 	}
 	if (direction == BACKWARD)
 	{
-		glm::vec3 newCameraPos = camera.m_position_point - camera.m_front_vector * camera.m_movement_speed * deltaTime;
 		if (wall_collision(newCameraPos))
 			return FORWARD;
 	}
-	
+
 	return direction;
 }
 
@@ -910,10 +850,14 @@ void do_movement()
 	//CameraControls
 	if (keys[GLFW_KEY_UP] && !(keys[GLFW_KEY_R] || keys[GLFW_KEY_S] || keys[GLFW_KEY_T])) {
 		Camera_Movement CM = check_movement(FORWARD);
+		if(CM == BACKWARD)
+			camera.processKeyBoard(CM, deltaTime*2);
 		camera.processKeyBoard(CM, deltaTime);
 	}
 	if (keys[GLFW_KEY_DOWN] && !(keys[GLFW_KEY_R] || keys[GLFW_KEY_S] || keys[GLFW_KEY_T])) {
 		Camera_Movement CM = check_movement(BACKWARD);
+		if (CM == FORWARD)
+			camera.processKeyBoard(CM, deltaTime * 2);
 		camera.processKeyBoard(CM, deltaTime);
 	}
 	if (keys[GLFW_KEY_LEFT] && !(keys[GLFW_KEY_R] || keys[GLFW_KEY_S] || keys[GLFW_KEY_T]))
@@ -1169,216 +1113,223 @@ void transformModelObject(int index)
 
 void initialize_scene_objects()
 {
-	//During the testing initialization phase, we give everything default values.
-	//After the testing phase, we'll have specific values to give everything, so we'll manage this through the macro
-	//Uncomment if in testing phase
+    //During the testing initialization phase, we give everything default values.
+    //After the testing phase, we'll have specific values to give everything, so we'll manage this through the macro
+//Uncomment if in testing phase
 #define TESTING
-
-	/*
-	enum SceneObjects
-	{
-	BED = 0, BEDROOM_NIGHTSTAND = 1, BEDROOM_CHAIR = 2, BEDROOM_DESKTOP = 3, BEDROOM_DRESSER = 4, BEDROOM_DESK_LAMP = 5, LIVINGROOM_COFFEETABLE = 6, LIVINGROOM_COUCH_EAST = 7, LIVINGROOM_COUCH_NORTH = 8, LIVINGROOM_LITTLETABLE = 9, LIVINGROOM_TELEVISION = 10, LIVINGROOM_TABLELIGHT = 11, KITCHEN_STOVE_SINK_DISHWASHER = 12, KITCHEN_FRIDGE = 13, KITCHEN_LAMP = 14, LIVINGROOM_RUG = 15, BEDROOM_RUG = 16, KITCHEN_DINING_TABLE = 17, KITCHEN_CHAIR_WEST = 18, KITCHEN_CHAIR_EAST = 19
-	};
-	*/
-#ifdef TESTING
-
-	//***Bedroom
-	std::cout << "Bedroom...\n";
-	//Bed
-	std::cout << "Index " << BED << " Pushing..." << std::endl;
-	ModelObject bedroom_bed_obj(filepath_object_bedroom_bed);
-	scene_objects.push_back(bedroom_bed_obj);
-	scene_objects[BED].m_position = glm::vec3(2.7f, 0.0f, 20.3f);
-	scene_objects[BED].m_rotation_angle_DEG = 1.0f;
-	scene_objects[BED].m_scale = 3.3f;
-	scene_objects[BED].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << BEDROOM_NIGHTSTAND << " Pushing..." << std::endl;
-	//Bedroom nightstand
-	ModelObject bedroom_nightstand_obj(filepath_object_bedroom_nightstand);
-	scene_objects.push_back(bedroom_nightstand_obj);
-	scene_objects[BEDROOM_NIGHTSTAND].m_position = glm::vec3(0.5f, 0.0f, 22.4f);
-	scene_objects[BEDROOM_NIGHTSTAND].m_rotation_angle_DEG = 0.225f;
-	scene_objects[BEDROOM_NIGHTSTAND].m_scale = 3.7f;
-	scene_objects[BEDROOM_NIGHTSTAND].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << BEDROOM_CHAIR << " Pushing..." << std::endl;
-	//Bedroom chair
-	ModelObject bedroom_chair_obj(filepath_object_bedroom_chair);
-	scene_objects.push_back(bedroom_chair_obj);
-	scene_objects[BEDROOM_CHAIR].m_position = glm::vec3(22.9001f, -0.9f, 23.7001f);
-	scene_objects[BEDROOM_CHAIR].m_rotation_angle_DEG = -0.6f;
-	scene_objects[BEDROOM_CHAIR].m_scale = 3.6f;
-	scene_objects[BEDROOM_CHAIR].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << BEDROOM_DESKTOP << " Pushing..." << std::endl;
-	//Bedroom desktop
-	ModelObject bedroom_desktop_obj(filepath_object_bedroom_desktop);
-	scene_objects.push_back(bedroom_desktop_obj);
-	scene_objects[BEDROOM_DESKTOP].m_position = glm::vec3(18.6f, 0.0f, 6.0f);
-	scene_objects[BEDROOM_DESKTOP].m_rotation_angle_DEG = -1.525f;
-	scene_objects[BEDROOM_DESKTOP].m_scale = 2.1f;
-	scene_objects[BEDROOM_DESKTOP].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << BEDROOM_DRESSER << " Pushing..." << std::endl;
-	//Bedroom dresser
-	ModelObject bedroom_dresser_obj(filepath_object_bedroom_dresser);
-	scene_objects.push_back(bedroom_dresser_obj);
-	scene_objects[BEDROOM_DRESSER].m_position = glm::vec3(9.5f, 0.0f, 28.4001f);
-	scene_objects[BEDROOM_DRESSER].m_rotation_angle_DEG = 4.70001f;
-	scene_objects[BEDROOM_DRESSER].m_scale = 5.0f;
-	scene_objects[BEDROOM_DRESSER].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << BEDROOM_DESK_LAMP << " Pushing..." << std::endl;
-	//Bedroom desk lamp
-	ModelObject bedroom_desk_lamp_obj(filepath_object_bedroom_desklamp);
-	scene_objects.push_back(bedroom_desk_lamp_obj);
-	scene_objects[BEDROOM_DESK_LAMP].m_position = glm::vec3(1.2f, 2.0f, 22.5f);
-	scene_objects[BEDROOM_DESK_LAMP].m_rotation_angle_DEG = 3.425f;
-	scene_objects[BEDROOM_DESK_LAMP].m_scale = 2.1f;
-	scene_objects[BEDROOM_DESK_LAMP].m_isInPosition = true;//We know where he goes
-
+    
     /*
-	enum SceneObjects
-	{
-	BED = 0, BEDROOM_NIGHTSTAND = 1, BEDROOM_CHAIR = 2, BEDROOM_DESKTOP = 3, BEDROOM_DRESSER = 4, BEDROOM_DESK_LAMP = 5, LIVINGROOM_COFFEETABLE = 6, LIVINGROOM_COUCH_EAST = 7, LIVINGROOM_COUCH_NORTH = 8, LIVINGROOM_LITTLETABLE = 9, LIVINGROOM_TELEVISION = 10, LIVINGROOM_TABLELIGHT = 11, KITCHEN_STOVE_SINK_DISHWASHER = 12, KITCHEN_FRIDGE = 13, KITCHEN_LAMP = 14
-	};
-	*/
+    enum SceneObjects
+    {
+        BED = 0, BEDROOM_NIGHTSTAND = 1, BEDROOM_CHAIR = 2, BEDROOM_DESKTOP = 3, BEDROOM_DRESSER = 4, BEDROOM_DESK_LAMP = 5, LIVINGROOM_COFFEETABLE = 6, LIVINGROOM_COUCH_EAST = 7, LIVINGROOM_COUCH_NORTH = 8, LIVINGROOM_LITTLETABLE = 9, LIVINGROOM_TELEVISION = 10, LIVINGROOM_TABLELIGHT = 11, KITCHEN_STOVE_SINK_DISHWASHER = 12, KITCHEN_FRIDGE = 13, KITCHEN_LAMP = 14, LIVINGROOM_RUG = 15, BEDROOM_RUG = 16, KITCHEN_DINING_TABLE = 17, KITCHEN_CHAIR_WEST = 18, KITCHEN_CHAIR_EAST = 19
+    };
+     */
+#ifdef TESTING
+    
+    //***Bedroom
+    std::cout << "Bedroom...\n";
+    //Bed
+    std::cout << "Index " << BED << " Pushing..." << std::endl;
+    ModelObject bedroom_bed_obj(filepath_object_bedroom_bed);
+    scene_objects.push_back(bedroom_bed_obj);
+    scene_objects[BED].m_position = glm::vec3(4.7f, 1.1f, 19.7f);
+    scene_objects[BED].m_rotation_angle_DEG = 1.0f;
+    scene_objects[BED].m_scale = 3.3f;
+    scene_objects[BED].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << BEDROOM_NIGHTSTAND << " Pushing..." << std::endl;
+    //Bedroom nightstand
+    ModelObject bedroom_nightstand_obj(filepath_object_bedroom_nightstand);
+    scene_objects.push_back(bedroom_nightstand_obj);
+    scene_objects[BEDROOM_NIGHTSTAND].m_position = glm::vec3(1.9f, 1.3f, 23.0f);
+    scene_objects[BEDROOM_NIGHTSTAND].m_rotation_angle_DEG = 0.4f;
+    scene_objects[BEDROOM_NIGHTSTAND].m_scale = 3.7f;
+    scene_objects[BEDROOM_NIGHTSTAND].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << BEDROOM_CHAIR << " Pushing..." << std::endl;
+    //Bedroom chair
+    ModelObject bedroom_chair_obj(filepath_object_bedroom_chair);
+    scene_objects.push_back(bedroom_chair_obj);
+    scene_objects[BEDROOM_CHAIR].m_position = glm::vec3(22.9001f, -0.9f, 23.7001f);
+    scene_objects[BEDROOM_CHAIR].m_rotation_angle_DEG = -0.6f;
+    scene_objects[BEDROOM_CHAIR].m_scale = 3.6f;
+    scene_objects[BEDROOM_CHAIR].m_isInPosition = true;//We know where he goes
 
-	//***Living room
-	std::cout << "Living room...\n";
-	std::cout << "Index " << LIVINGROOM_COFFEETABLE << " Pushing..." << std::endl;
-	//Living room coffee table
-	ModelObject livingroom_coffeetable_obj(filepath_object_livingroom_coffeetable);
-	scene_objects.push_back(livingroom_coffeetable_obj);
-	scene_objects[LIVINGROOM_COFFEETABLE].m_position = glm::vec3(23.3001f, 2.2f, 8.7f);
-	scene_objects[LIVINGROOM_COFFEETABLE].m_rotation_angle_DEG = 0.05f;
-	scene_objects[LIVINGROOM_COFFEETABLE].m_scale = 4.4f;
-	scene_objects[LIVINGROOM_COFFEETABLE].m_isInPosition = true;//We know where he goes
+    std::cout << "Index " << BEDROOM_DESKTOP << " Pushing..." << std::endl;
+    //Bedroom desktop
+    ModelObject bedroom_desktop_obj(filepath_object_bedroom_desktop);
+    scene_objects.push_back(bedroom_desktop_obj);
+    scene_objects[BEDROOM_DESKTOP].m_position = glm::vec3(21.7f, 1.6f, 27.5001f);
+    scene_objects[BEDROOM_DESKTOP].m_rotation_angle_DEG = 3.125f;
+    scene_objects[BEDROOM_DESKTOP].m_scale = 3.3f;
+    scene_objects[BEDROOM_DESKTOP].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << BEDROOM_DRESSER << " Pushing..." << std::endl;
+    //Bedroom dresser
+    ModelObject bedroom_dresser_obj(filepath_object_bedroom_dresser);
+    scene_objects.push_back(bedroom_dresser_obj);
+    scene_objects[BEDROOM_DRESSER].m_position = glm::vec3(9.5f, 3.1f, 28.1001f);
+    scene_objects[BEDROOM_DRESSER].m_rotation_angle_DEG = 4.70001f;
+    scene_objects[BEDROOM_DRESSER].m_scale = 5.0f;
+    scene_objects[BEDROOM_DRESSER].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << BEDROOM_DESK_LAMP << " Pushing..." << std::endl;
+    //Bedroom desk lamp
+    ModelObject bedroom_desk_lamp_obj(filepath_object_bedroom_desklamp);
+    scene_objects.push_back(bedroom_desk_lamp_obj);
+    scene_objects[BEDROOM_DESK_LAMP].m_position = glm::vec3(1.2f, 2.4f, 22.7f);
+    scene_objects[BEDROOM_DESK_LAMP].m_rotation_angle_DEG = 3.525f;
+    scene_objects[BEDROOM_DESK_LAMP].m_scale = 2.1f;
+    scene_objects[BEDROOM_DESK_LAMP].m_isInPosition = true;//We know where he goes
+    
+    /*
+     enum SceneObjects
+     {
+     BED = 0, BEDROOM_NIGHTSTAND = 1, BEDROOM_CHAIR = 2, BEDROOM_DESKTOP = 3, BEDROOM_DRESSER = 4, BEDROOM_DESK_LAMP = 5, LIVINGROOM_COFFEETABLE = 6, LIVINGROOM_COUCH_EAST = 7, LIVINGROOM_COUCH_NORTH = 8, LIVINGROOM_LITTLETABLE = 9, LIVINGROOM_TELEVISION = 10, LIVINGROOM_TABLELIGHT = 11, KITCHEN_STOVE_SINK_DISHWASHER = 12, KITCHEN_FRIDGE = 13, KITCHEN_LAMP = 14
+     };
+     */
+    
+    //***Living room
+    std::cout << "Living room...\n";
+    std::cout << "Index " << LIVINGROOM_COFFEETABLE << " Pushing..." << std::endl;
+    //Living room coffee table
+    ModelObject livingroom_coffeetable_obj(filepath_object_livingroom_coffeetable);
+    scene_objects.push_back(livingroom_coffeetable_obj);
+    scene_objects[LIVINGROOM_COFFEETABLE].m_position = glm::vec3(22.8001f, 1.1f, 8.2f);
+    scene_objects[LIVINGROOM_COFFEETABLE].m_rotation_angle_DEG = 0.05f;
+    scene_objects[LIVINGROOM_COFFEETABLE].m_scale = 4.1f;
+    scene_objects[LIVINGROOM_COFFEETABLE].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << LIVINGROOM_COUCH_EAST << " Pushing..." << std::endl;
+    //Living room "eastern" couch
+    ModelObject livingroom_couch_east_obj(filepath_object_livingroom_couch_east);
+    scene_objects.push_back(livingroom_couch_east_obj);
+    scene_objects[LIVINGROOM_COUCH_EAST].m_position = glm::vec3(27.9001f, 1.3f, 8.0f);
+    scene_objects[LIVINGROOM_COUCH_EAST].m_rotation_angle_DEG = 4.70001f;
+    scene_objects[LIVINGROOM_COUCH_EAST].m_scale = 4.9f;
+    scene_objects[LIVINGROOM_COUCH_EAST].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << LIVINGROOM_COUCH_NORTH << " Pushing..." << std::endl;
+    //Living room "northern" couch
+    ModelObject livingroom_couch_north_obj(filepath_object_livingroom_couch_north);
+    scene_objects.push_back(livingroom_couch_north_obj);
+    scene_objects[LIVINGROOM_COUCH_NORTH].m_position = glm::vec3(22.2f, 1.0f, 2.2f);
+    scene_objects[LIVINGROOM_COUCH_NORTH].m_rotation_angle_DEG = (GLfloat)3.72529e-09;
+    scene_objects[LIVINGROOM_COUCH_NORTH].m_scale = 6.9f;
+    scene_objects[LIVINGROOM_COUCH_NORTH].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << LIVINGROOM_LITTLETABLE << " Pushing..." << std::endl;
+    //Living room little table
+    ModelObject livingroom_littletable_obj(filepath_object_livingroom_littletable);
+    scene_objects.push_back(livingroom_littletable_obj);
+    scene_objects[LIVINGROOM_LITTLETABLE].m_position = glm::vec3(27.8001f, 1.4f, 3.4f);
+    scene_objects[LIVINGROOM_LITTLETABLE].m_rotation_angle_DEG = 3.45001f;
+    scene_objects[LIVINGROOM_LITTLETABLE].m_scale = 4.7f;
+    scene_objects[LIVINGROOM_LITTLETABLE].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << LIVINGROOM_TELEVISION << " Pushing..." << std::endl;
+    //Living room television
+    ModelObject livingroom_television_obj(filepath_object_livingroom_television);
+    scene_objects.push_back(livingroom_television_obj);
+    scene_objects[LIVINGROOM_TELEVISION].m_position = glm::vec3(16.0f, 1.0f, 5.2f);
+    scene_objects[LIVINGROOM_TELEVISION].m_rotation_angle_DEG = 1.55f;
+    scene_objects[LIVINGROOM_TELEVISION].m_scale = 3.7f;
+    scene_objects[LIVINGROOM_TELEVISION].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << LIVINGROOM_TABLELIGHT << " Pushing..." << std::endl;
+    //Living room table light
+    ModelObject livingroom_tablelight_obj(filepath_object_livingroom_tablelight);
+    scene_objects.push_back(livingroom_tablelight_obj);
+    scene_objects[LIVINGROOM_TABLELIGHT].m_position = glm::vec3(27.6f, 3.5f, 2.8f);
+    scene_objects[LIVINGROOM_TABLELIGHT].m_rotation_angle_DEG = 0.025f;
+    scene_objects[LIVINGROOM_TABLELIGHT].m_scale = 3.0f;
+    scene_objects[LIVINGROOM_TABLELIGHT].m_isInPosition = true;//We know where he goes
+    
+    //***Kitchen
+    std::cout << "Kitchen...\n";
+    std::cout << "Index " << KITCHEN_STOVE_SINK_DISHWASHER << " Pushing..." << std::endl;
+    //Kitchen stove, sink, and dishwasher
+    ModelObject kitchen_stove_sink_dishwasher_obj(filepath_object_kitchen_sink_stove_dishwasher);
+    scene_objects.push_back(kitchen_stove_sink_dishwasher_obj);
+    scene_objects[KITCHEN_STOVE_SINK_DISHWASHER].m_position = glm::vec3(10.8f, 0.0f, 2.0f);
+    scene_objects[KITCHEN_STOVE_SINK_DISHWASHER].m_rotation_angle_DEG = (GLfloat)3.3527e-08;
+    scene_objects[KITCHEN_STOVE_SINK_DISHWASHER].m_scale = 1.5f;
+    scene_objects[KITCHEN_STOVE_SINK_DISHWASHER].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << KITCHEN_FRIDGE << " Pushing..." << std::endl;
+    //Kitchen stove, sink, and dishwasher
+    ModelObject kitchen_fridge_obj(filepath_object_kitchen_fridge);
+    scene_objects.push_back(kitchen_fridge_obj);
+    scene_objects[KITCHEN_FRIDGE].m_position = glm::vec3(5.59998f, 2.4f, 1.3f);
+    scene_objects[KITCHEN_FRIDGE].m_rotation_angle_DEG = 6.30001f;
+    scene_objects[KITCHEN_FRIDGE].m_scale = 3.3f;
+    scene_objects[KITCHEN_FRIDGE].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << KITCHEN_LAMP << " Pushing..." << std::endl;
+    //Kitchen lamp
+    ModelObject kitchen_lamp_obj(filepath_object_kitchen_light);
+    scene_objects.push_back(kitchen_lamp_obj);
+    scene_objects[KITCHEN_LAMP].m_position = glm::vec3(6.5f, 5.1f, 13.8f);
+    scene_objects[KITCHEN_LAMP].m_rotation_angle_DEG = 0.0f;
+    scene_objects[KITCHEN_LAMP].m_scale = 6.7f;
+    scene_objects[KITCHEN_LAMP].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Some bonus furniture..." << std::endl;
+    std::cout << "Index " << LIVINGROOM_RUG << " Pushing..." << std::endl;
+    //Living room rug
+    ModelObject livingroom_rug_obj(filepath_object_livingroom_rug);
+    scene_objects.push_back(livingroom_rug_obj);
+    scene_objects[LIVINGROOM_RUG].m_position = glm::vec3(20.5f, 0.0f, 9.5f);
+    scene_objects[LIVINGROOM_RUG].m_rotation_angle_DEG = (GLfloat)-3.35276e-08;
+    scene_objects[LIVINGROOM_RUG].m_scale = 4.8f;
+    scene_objects[LIVINGROOM_RUG].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << BEDROOM_RUG << " Pushing..." << std::endl;
+    //Bedroom rug
+    ModelObject bedroom_rug_obj(filepath_object_bedroom_rug);
+    scene_objects.push_back(bedroom_rug_obj);
+    scene_objects[BEDROOM_RUG].m_position = glm::vec3(12.3f, 0.0f, -59.9997f);
+    scene_objects[BEDROOM_RUG].m_rotation_angle_DEG = -1.575;
+    scene_objects[BEDROOM_RUG].m_scale = 7.7f;
+    scene_objects[BEDROOM_RUG].m_isInPosition = true;//We know where he goes
 
-	std::cout << "Index " << LIVINGROOM_COUCH_EAST << " Pushing..." << std::endl;
-	//Living room "eastern" couch
-	ModelObject livingroom_couch_east_obj(filepath_object_livingroom_couch_east);
-	scene_objects.push_back(livingroom_couch_east_obj);
-	scene_objects[LIVINGROOM_COUCH_EAST].m_position = glm::vec3(27.9001f, 0.0f, 6.5f);
-	scene_objects[LIVINGROOM_COUCH_EAST].m_rotation_angle_DEG = 4.70001f;
-	scene_objects[LIVINGROOM_COUCH_EAST].m_scale = 1.9f;
-	scene_objects[LIVINGROOM_COUCH_EAST].m_isInPosition = true;//We know where he goes
+    std::cout << "Index " << KITCHEN_DINING_TABLE << " Pushing..." << std::endl;
+    //Kitchen dining table
+    ModelObject kitchen_diningtable_obj(filepath_object_kitchen_diningtable);
+    scene_objects.push_back(kitchen_diningtable_obj);
+    scene_objects[KITCHEN_DINING_TABLE].m_position = glm::vec3(6.89996, 0.9f, 11.4f);
+    scene_objects[KITCHEN_DINING_TABLE].m_rotation_angle_DEG = 0.0f;
+    scene_objects[KITCHEN_DINING_TABLE].m_scale = 5.4f;
+    scene_objects[KITCHEN_DINING_TABLE].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << KITCHEN_CHAIR_WEST << " Pushing..." << std::endl;
+    //Kitchen dining chair west
+    ModelObject kitchen_chair_west_obj(filepath_object_kitchen_diningchair_west);
+    scene_objects.push_back(kitchen_chair_west_obj);
+    scene_objects[KITCHEN_CHAIR_WEST].m_position = glm::vec3(2.800051f, 1.2f, 11.6f);
+    scene_objects[KITCHEN_CHAIR_WEST].m_rotation_angle_DEG = 2.2f;
+    scene_objects[KITCHEN_CHAIR_WEST].m_scale = 3.0f;
+    scene_objects[KITCHEN_CHAIR_WEST].m_isInPosition = true;//We know where he goes
+    
+    std::cout << "Index " << KITCHEN_CHAIR_EAST << " Pushing..." << std::endl;
+    //Kitchen dining chair west
+    ModelObject kitchen_chair_east_obj(filepath_object_kitchen_diningchair_east);
+    scene_objects.push_back(kitchen_chair_east_obj);
+    scene_objects[KITCHEN_CHAIR_EAST].m_position = glm::vec3(10.3001f, 1.3f, 12.0f);
+    scene_objects[KITCHEN_CHAIR_EAST].m_rotation_angle_DEG = -2.0f;
+    scene_objects[KITCHEN_CHAIR_EAST].m_scale = 2.9f;
+    scene_objects[KITCHEN_CHAIR_EAST].m_isInPosition = true;//We know where he goes
 
-	std::cout << "Index " << LIVINGROOM_COUCH_NORTH << " Pushing..." << std::endl;
-	//Living room "northern" couch
-	ModelObject livingroom_couch_north_obj(filepath_object_livingroom_couch_north);
-	scene_objects.push_back(livingroom_couch_north_obj);
-	scene_objects[LIVINGROOM_COUCH_NORTH].m_position = glm::vec3(20.9f, 0.0f, 2.2f);
-	scene_objects[LIVINGROOM_COUCH_NORTH].m_rotation_angle_DEG = (GLfloat)3.72529e-09;
-	scene_objects[LIVINGROOM_COUCH_NORTH].m_scale = 1.9f;
-	scene_objects[LIVINGROOM_COUCH_NORTH].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << LIVINGROOM_LITTLETABLE << " Pushing..." << std::endl;
-	//Living room little table
-	ModelObject livingroom_littletable_obj(filepath_object_livingroom_littletable);
-	scene_objects.push_back(livingroom_littletable_obj);
-	scene_objects[LIVINGROOM_LITTLETABLE].m_position = glm::vec3(27.3001f, 0.0f, 2.7f);
-	scene_objects[LIVINGROOM_LITTLETABLE].m_rotation_angle_DEG = 4.10001f;
-	scene_objects[LIVINGROOM_LITTLETABLE].m_scale = 3.9f;
-	scene_objects[LIVINGROOM_LITTLETABLE].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << LIVINGROOM_TELEVISION << " Pushing..." << std::endl;
-	//Living room television
-	ModelObject livingroom_television_obj(filepath_object_livingroom_television);
-	scene_objects.push_back(livingroom_television_obj);
-	scene_objects[LIVINGROOM_TELEVISION].m_position = glm::vec3(-24.8001f, 0.0f, 7.4f);
-	scene_objects[LIVINGROOM_TELEVISION].m_rotation_angle_DEG = (GLfloat)-3.3527e-08;
-	scene_objects[LIVINGROOM_TELEVISION].m_scale = 4.1f;
-	scene_objects[LIVINGROOM_TELEVISION].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << LIVINGROOM_TABLELIGHT << " Pushing..." << std::endl;
-	//Living room table light
-	ModelObject livingroom_tablelight_obj(filepath_object_livingroom_tablelight);
-	scene_objects.push_back(livingroom_tablelight_obj);
-	scene_objects[LIVINGROOM_TABLELIGHT].m_position = glm::vec3(19.4f, 2.4f, 4.9f);
-	scene_objects[LIVINGROOM_TABLELIGHT].m_rotation_angle_DEG = 0.025f;
-	scene_objects[LIVINGROOM_TABLELIGHT].m_scale = 3.0f;
-	scene_objects[LIVINGROOM_TABLELIGHT].m_isInPosition = true;//We know where he goes
-
-	//***Kitchen
-	std::cout << "Kitchen...\n";
-	std::cout << "Index " << KITCHEN_STOVE_SINK_DISHWASHER << " Pushing..." << std::endl;
-	//Kitchen stove, sink, and dishwasher
-	ModelObject kitchen_stove_sink_dishwasher_obj(filepath_object_kitchen_sink_stove_dishwasher);
-	scene_objects.push_back(kitchen_stove_sink_dishwasher_obj);
-	scene_objects[KITCHEN_STOVE_SINK_DISHWASHER].m_position = glm::vec3(10.8f, 0.0f, 2.0f);
-	scene_objects[KITCHEN_STOVE_SINK_DISHWASHER].m_rotation_angle_DEG = (GLfloat)3.3527e-08;
-	scene_objects[KITCHEN_STOVE_SINK_DISHWASHER].m_scale = 1.5f;
-	scene_objects[KITCHEN_STOVE_SINK_DISHWASHER].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << KITCHEN_FRIDGE << " Pushing..." << std::endl;
-	//Kitchen stove, sink, and dishwasher
-	ModelObject kitchen_fridge_obj(filepath_object_kitchen_fridge);
-	scene_objects.push_back(kitchen_fridge_obj);
-	scene_objects[KITCHEN_FRIDGE].m_position = glm::vec3(36.5f, 0.0f, 3.7f);
-	scene_objects[KITCHEN_FRIDGE].m_rotation_angle_DEG = 3.075f;
-	scene_objects[KITCHEN_FRIDGE].m_scale = 3.3f;
-	scene_objects[KITCHEN_FRIDGE].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << KITCHEN_LAMP << " Pushing..." << std::endl;
-	//Kitchen lamp
-	ModelObject kitchen_lamp_obj(filepath_object_kitchen_light);
-	scene_objects.push_back(kitchen_lamp_obj);
-	scene_objects[KITCHEN_LAMP].m_position = glm::vec3(6.5f, 5.1f, 13.8f);
-	scene_objects[KITCHEN_LAMP].m_rotation_angle_DEG = 0.0f;
-	scene_objects[KITCHEN_LAMP].m_scale = 6.7f;
-	scene_objects[KITCHEN_LAMP].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Some bonus furniture..." << std::endl;
-	std::cout << "Index " << LIVINGROOM_RUG << " Pushing..." << std::endl;
-	//Living room rug
-	ModelObject livingroom_rug_obj(filepath_object_livingroom_rug);
-	scene_objects.push_back(livingroom_rug_obj);
-	scene_objects[LIVINGROOM_RUG].m_position = glm::vec3(20.5f, 0.0f, 9.5f);
-	scene_objects[LIVINGROOM_RUG].m_rotation_angle_DEG = (GLfloat)-3.35276e-08;
-	scene_objects[LIVINGROOM_RUG].m_scale = 4.8f;
-	scene_objects[LIVINGROOM_RUG].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << BEDROOM_RUG << " Pushing..." << std::endl;
-	//Bedroom rug
-	ModelObject bedroom_rug_obj(filepath_object_bedroom_rug);
-	scene_objects.push_back(bedroom_rug_obj);
-	scene_objects[BEDROOM_RUG].m_position = glm::vec3(12.3f, 0.0f, -59.9997f);
-	scene_objects[BEDROOM_RUG].m_rotation_angle_DEG = -1.575;
-	scene_objects[BEDROOM_RUG].m_scale = 7.7f;
-	scene_objects[BEDROOM_RUG].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << KITCHEN_DINING_TABLE << " Pushing..." << std::endl;
-	//Kitchen dining table
-	ModelObject kitchen_diningtable_obj(filepath_object_kitchen_diningtable);
-	scene_objects.push_back(kitchen_diningtable_obj);
-	scene_objects[KITCHEN_DINING_TABLE].m_position = glm::vec3(-40.1f, 0.0f, 11.4f);
-	scene_objects[KITCHEN_DINING_TABLE].m_rotation_angle_DEG = 0.0f;
-	scene_objects[KITCHEN_DINING_TABLE].m_scale = 4.2f;
-	scene_objects[KITCHEN_DINING_TABLE].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << KITCHEN_CHAIR_WEST << " Pushing..." << std::endl;
-	//Kitchen dining chair west
-	ModelObject kitchen_chair_west_obj(filepath_object_kitchen_diningchair_west);
-	scene_objects.push_back(kitchen_chair_west_obj);
-	scene_objects[KITCHEN_CHAIR_WEST].m_position = glm::vec3(22.4001f, 0.0f, 37.2f);
-	scene_objects[KITCHEN_CHAIR_WEST].m_rotation_angle_DEG = 2.25f;
-	scene_objects[KITCHEN_CHAIR_WEST].m_scale = 3.0f;
-	scene_objects[KITCHEN_CHAIR_WEST].m_isInPosition = true;//We know where he goes
-
-	std::cout << "Index " << KITCHEN_CHAIR_EAST << " Pushing..." << std::endl;
-	//Kitchen dining chair west
-	ModelObject kitchen_chair_east_obj(filepath_object_kitchen_diningchair_east);
-	scene_objects.push_back(kitchen_chair_east_obj);
-	scene_objects[KITCHEN_CHAIR_EAST].m_position = glm::vec3(22.5001f, 0.0f, -13.2f);
-	scene_objects[KITCHEN_CHAIR_EAST].m_rotation_angle_DEG = -2.0f;
-	scene_objects[KITCHEN_CHAIR_EAST].m_scale = 2.6f;
-	scene_objects[KITCHEN_CHAIR_EAST].m_isInPosition = true;//We know where he goes
-
+    //For everybody built, initialize the bounding box
+    for (ModelObject o : scene_objects)
+    {
+        o.initializeBoundingBox();
+        o.getWorldCoordinates();
+    }
+    
 #endif
 #ifndef TESTING//for when we know where everybody goes
-
+    
 #endif
 }
 
