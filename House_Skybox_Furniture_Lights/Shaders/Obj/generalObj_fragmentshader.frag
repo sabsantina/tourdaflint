@@ -17,29 +17,24 @@ uniform vec3 lightCol3;
 
 uniform vec3 viewPosition;
 uniform sampler2D texture_diffuse1;
-uniform sampler2D texture_specular1;
+//uniform sampler2D texture_specular1;
 
 vec3 specular_light;
-float attenuation;
 
 vec3 CalcPointLight(vec3 lightpos, vec3 lightCol, vec3 normal, vec3 fragPosition, vec3 viewDir);
 
 void main()
 {    
     vec3 tex_col = vec3(texture(texture_diffuse1, TexCoords));
-	vec3 spec_col =  vec3(texture(texture_specular1, TexCoords));
 
 	vec3 normal = normalize(outNormal);
 	vec3 viewDir = normalize(viewPosition - fragPosition);
 
 	vec3 result1 = CalcPointLight(lightPos1, lightCol1, normal, fragPosition, viewDir);
-	vec3 spec_result = specular_light * attenuation * spec_col;
 	vec3 result2 = CalcPointLight(lightPos2, lightCol2, normal, fragPosition, viewDir);
-	spec_result += specular_light * attenuation * spec_col;
 	vec3 result3 = CalcPointLight(lightPos3, lightCol3, normal, fragPosition, viewDir);
-	spec_result += specular_light * attenuation * spec_col;
-	
-	vec3 result = (result1+result2+result3)*tex_col + spec_result;
+
+	vec3 result = (result1+result2+result3)*tex_col;
 	
 	FragColor = vec4(result,1.0f);
 	
@@ -55,15 +50,15 @@ vec3 CalcPointLight(vec3 lightpos, vec3 lightCol, vec3 normal, vec3 fragPosition
 		// Specular shading
 		vec3 reflectDir = reflect(-lightDir, normal);
 		float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0f);
-		
 		// Attenuation
+
 		float distance = length(lightpos - fragPosition);
-		attenuation = 1.0f / (1.0f+0.09f*distance + 0.032*(distance*distance));   
+		float attenuation = 1.0f / (1.0f+0.09f*distance + 0.032*(distance*distance));   
 		 
 		// Combine results
 		vec3 ambient_light = ambient * lightCol;
 		vec3 diffuse_light = diff * lightCol;
-		specular_light = spec *lightCol;
+		vec3 specular_light = spec *lightCol;
 
-		return (ambient_light + diffuse_light*attenuation);
+		return (ambient_light + (diffuse_light + specular_light)*attenuation);
 }
