@@ -30,7 +30,7 @@ newmtl FrontColor
 Ka 0.000000 0.000000 0.000000
 Kd 1.000000 1.000000 1.000000
 Ks 0.330000 0.330000 0.330000
-map_Kd TV_5/black.jpeg
+map_Kd TV_5/seamless_black.jpeg
 
 newmtl M_0133_Gray
 Ka 0.000000 0.000000 0.000000

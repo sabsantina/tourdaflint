@@ -1,0 +1,9 @@
+To-do list Saturday
+
+Collision object-to-object, user-to-object, wall-to-user, wall-to-object
+
+Right, so I managed to get user-to-object done. I got seriously hampered by my class structure last night, I resolved that instead of giving the ModelObject its own BoundingBox instance, we'll manage the Bounding boxes through the main. It's not that difficult, it was just a hassle for me to convert everything to this; I'd spent many hours trying to fix it the other way.
+At any rate, with respect to user-object collision, what I've done is set it so that there's a small circle of padding that's set out around the camera position in the camera class. Ideally, this padding would only be applied to the 45 degrees of the perspective view forward and backward (which would mean the points are constantly changing with respect to the front view vector), but I didn't manage to get that working. In the meantime, I just have the padding go in a full circle round the player and the set-up is that should any of the points in the padding cross over into the volume of any bounding box, then the user is said to be colliding with that object, so we push them back. This works, but it requires the 45 degree business to work fully properly. I also managed to get the bounded boxes to update with respect to object position; users can move objects around and the bounding box will update accordingly, preventing further collisions.
+Seriously, wow, what a wreck tonight was. Ugh, I'll have to work extra hard tonight.
+
+I've been invited to my father's tonight, so I'll be getting to work a bit later. I'll try to wake up early to get home early and come see you on Hangouts. Good luck in the meantime!
