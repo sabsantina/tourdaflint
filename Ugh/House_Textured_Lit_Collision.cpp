@@ -1181,31 +1181,67 @@ void transformModelObject(int index)
     GLfloat increaseValue = 0.1f;
     if (keys[GLFW_KEY_T])
     {
-        glm::vec3 new_position;
-        if (keys[GLFW_KEY_UP] && !keys[GLFW_KEY_RIGHT_SHIFT])//translate object towards z-
-        {
-            new_position = glm::vec3(0.0f, 0.0f, -increaseValue);
-        }
-        if (keys[GLFW_KEY_DOWN] && !keys[GLFW_KEY_RIGHT_SHIFT])//translate object towards z+
-        {
-            new_position = glm::vec3(0.0f, 0.0f, increaseValue);
-        }
-        if (keys[GLFW_KEY_LEFT])//translate object towards x-
-        {
-            new_position = glm::vec3(-increaseValue, 0.0f, 0.0f);
-        }
-        if (keys[GLFW_KEY_RIGHT])//translate object towards x+
-        {
-            new_position = glm::vec3(increaseValue, 0.0f, 0.0f);
-        }
-        if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_UP])//translate object towards y+
-        {
-            new_position = glm::vec3(0.0f, increaseValue, 0.0f);
-        }
-        if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_DOWN])//translate object towards y-
-        {
-            new_position = glm::vec3(0.0f, -increaseValue, 0.0f);
-        }
+  		//Get the direction from the camera to the object
+		glm::vec3 direction = scene_objects[index].m_position - camera.m_position_point;
+		//Get the right direction of the object based on camera direction
+		glm::vec3 right = glm::normalize(glm::cross(direction, glm::vec3(0, 1, 0)));
+		//Use the direction vector to move the object forward and back
+		//Use right vector move object right or left
+		//This allows us to no longer rely on knowing the direction z and x 
+		//Which I find can be confusing
+		if (keys[GLFW_KEY_UP])//translate object towards z-
+		{
+			scene_objects[index].m_position += direction*increaseValue;
+		}
+		if (keys[GLFW_KEY_DOWN])//translate object towards z+
+		{
+			scene_objects[index].m_position -= direction*increaseValue;
+		}
+		if (keys[GLFW_KEY_LEFT])//translate object towards x-
+		{
+			scene_objects[index].m_position -= right*increaseValue;
+		}
+		if (keys[GLFW_KEY_RIGHT])//translate object towards x+
+		{
+			scene_objects[index].m_position += right*increaseValue;
+		}
+		//This is fine since camera position and target won't affect this
+		if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_UP])//translate object towards y+
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, increaseValue, 0.0f);
+		}
+		if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_DOWN])//translate object towards y-
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, -increaseValue, 0.0f);
+		}
+		//This is not a very good way to do this 
+		//Since its hard to tell which way z and x axis are 
+		/*
+		if (keys[GLFW_KEY_UP])//translate object towards z-
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, 0.0f, -increaseValue);
+		}
+		if (keys[GLFW_KEY_DOWN])//translate object towards z+
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, 0.0f, increaseValue);
+		}
+		if (keys[GLFW_KEY_LEFT])//translate object towards x-
+		{
+			scene_objects[index].m_position += glm::vec3(-increaseValue, 0.0f, 0.0f);
+		}
+		if (keys[GLFW_KEY_RIGHT])//translate object towards x+
+		{
+			scene_objects[index].m_position += glm::vec3(increaseValue, 0.0f, 0.0f);
+		}
+		if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_UP])//translate object towards y+
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, increaseValue, 0.0f);
+		}
+		if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_DOWN])//translate object towards y-
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, -increaseValue, 0.0f);
+		}
+		*/
         //verify the new position to ensure it isn't colliding with any other objects
         //If the provided position falls within any bounding box...
         if (falls_within_any_boundingbox(new_position))
