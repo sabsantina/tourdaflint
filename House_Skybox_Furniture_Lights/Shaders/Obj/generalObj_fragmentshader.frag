@@ -29,10 +29,16 @@ void main()
 
 	vec3 normal = normalize(outNormal);
 	vec3 viewDir = normalize(viewPosition - fragPosition);
-
-	vec3 result1 = CalcPointLight(lightPos1, lightCol1, normal, fragPosition, viewDir);
+	vec3 result1, result3;
+	if(fragPosition.z < 15)
+		result1 = CalcPointLight(lightPos1, lightCol1, normal, fragPosition, viewDir);
+	else
+		result1 = 0.1f * lightCol1;
 	vec3 result2 = CalcPointLight(lightPos2, lightCol2, normal, fragPosition, viewDir);
-	vec3 result3 = CalcPointLight(lightPos3, lightCol3, normal, fragPosition, viewDir);
+	if(fragPosition.z > 15)
+		result3 = CalcPointLight(lightPos3, lightCol3, normal, fragPosition, viewDir);
+	else
+		result3 = 0.1f * lightCol3; 
 
 	vec3 result = (result1+result2+result3)*tex_col;
 	
