@@ -110,6 +110,7 @@ bool user_is_transforming = false;
 
 //Filepaths
 #ifdef SABIN
+//Shader paths
 const GLchar
 *filepath_shader_wall_vertexshader = "Shaders/Walls/walls_vertexshader.vs",
 *filepath_shader_wall_fragmentshader = "Shaders/Walls/walls_fragmentshader.frag",
@@ -123,9 +124,65 @@ const GLchar
 *filepath_shader_window_fragmentshader = "Shaders/Window/window_fragmentshader.frag",
 *filepath_shader_lamp_vertexshader = "Shaders/Lamp/lamp_vertexshader.vs",
 *filepath_shader_lamp_fragmentshader = "Shaders/Lamp/lamp_fragmentshader.frag";
+
+
+//Object paths
+enum SceneObjects
+{
+	BED = 0, BEDROOM_NIGHTSTAND = 1, BEDROOM_CHAIR = 2, BEDROOM_DESKTOP = 3, BEDROOM_DRESSER = 4, BEDROOM_DESK_LAMP = 5, LIVINGROOM_COFFEETABLE = 6, LIVINGROOM_COUCH_EAST = 7, LIVINGROOM_COUCH_NORTH = 8, LIVINGROOM_LITTLETABLE = 9, LIVINGROOM_TELEVISION = 10, LIVINGROOM_TABLELIGHT = 11, KITCHEN_STOVE_SINK_DISHWASHER = 12, KITCHEN_FRIDGE = 13, KITCHEN_LAMP = 14, LIVINGROOM_RUG = 15, BEDROOM_RUG = 16, KITCHEN_DINING_TABLE = 17, KITCHEN_CHAIR_WEST = 18, KITCHEN_CHAIR_EAST = 19
+};
+vector<ModelObject> scene_objects; //VECTOR OF ALL MODEL OBJECTS!
+
+								   //Object paths
 const GLchar
+//Model for the house's exterior as a whole
 *filepath_object_cube = "Models/cube/cube.obj",
-*filepath_object_shelf1 = "Models/nanosuit/nanosuit.obj";
+/*      BEDROOM         */
+//Model for bed in bedroom
+*filepath_object_bedroom_bed = "Models/Bed/Bed.obj",
+//Model for nightstand in bedroom
+*filepath_object_bedroom_nightstand = "Models/Tables/Nightstand/Nightstand.obj",
+//Model for chair in bedroom
+*filepath_object_bedroom_chair = "Models/Chairs/Throne3/Throne3.obj",
+//Model for table/shelf with computer in bedroom
+*filepath_object_bedroom_desktop = "Models/Tables/Desk_Construction/Desk/Desk.obj",
+//Model for dresser in bedroom
+*filepath_object_bedroom_dresser = "Models/Shelves/Dresser_2/Dresser_2.obj",
+//Model for desklamp in bedroom
+*filepath_object_bedroom_desklamp = "Models/Lights/bedroom/desklamp/desklamp.obj",
+/*    LIVING ROOM       */
+//Model for coffee table in living room
+*filepath_object_livingroom_coffeetable = "Models/Tables/LivingRoomTable/LivingRoomTable.obj",
+//Model for "eastern"-most couch in living room
+*filepath_object_livingroom_couch_east = "Models/Chairs/Sofa_2/Sofa_2.obj",
+//Model for couch slightly "north" of preceding model in living room (why am I using two different couches? xD Let's just use the same couch model twice, it makes much more sense, in every way)
+*filepath_object_livingroom_couch_north = "Models/Chairs/Sofa_2/Sofa_2.obj",
+//Model for nightstand-like little table in between the two couches
+*filepath_object_livingroom_littletable = "Models/Tables/LivingRoomLittleTable_2/LivingRoomLittleTable_2.obj",
+//Model for living room television
+*filepath_object_livingroom_television = "Models/TV/TV_5/TV_5.obj",
+//Model for living room light (on little table to "north-east")
+*filepath_object_livingroom_tablelight = "Models/Lights/livingroom/livingroom_littletablelight.obj",
+/*      KITCHEN         */
+//Model for dish washer, stove, and sink in kitchen (comes with shelves above the sink (this model needs to be mounted to the wall))
+*filepath_object_kitchen_sink_stove_dishwasher = "Models/Kitchen/Fridge_4/Fridge_4.obj",
+//Model for kitchen fridge
+*filepath_object_kitchen_fridge = "Models/Kitchen/Fridge_4/Fridge_4.obj",
+//Model for kitchen light
+*filepath_object_kitchen_light = "Models/Lights/kitchen_lights/kitchen_light4/kitchen_light4.obj",
+//Model for living room rug
+*filepath_object_livingroom_rug = "Models/Rugs/bedroom_rug/bedroom_rug.obj",
+//Model for bedroom rug
+*filepath_object_bedroom_rug = "Models/Rugs/bedroom_rug/bedroom_rug.obj",
+//Model for kitchen dining table
+*filepath_object_kitchen_diningtable = "Models/Tables/LivingRoomTable/LivingRoomTable.obj",
+//Model for kitchen dining chair
+*filepath_object_kitchen_diningchair_west = "Models/Chairs/Kitchen_diningchairs/kitchen_diningchairs.obj",
+//Model for kitchen dining chair
+*filepath_object_kitchen_diningchair_east = "Models/Chairs/Kitchen_diningchairs/kitchen_diningchairs.obj";
+
+//const GLchar
+//*filepath_object_shelf1 = "Models/nanosuit/nanosuit.obj";
 
 const GLchar
 *filepath_texture_skybox_right = "Textures/SkyBox/right.jpg",
@@ -135,13 +192,14 @@ const GLchar
 *filepath_texture_skybox_back = "Textures/SkyBox/back.jpg",
 *filepath_texture_skybox_front = "Textures/SkyBox/front.jpg",
 *filepath_texture_floor = "Textures/floor.jpg",
-*filepath_texture_ceiling = "Textures/ceiling.jpg";
+*filepath_texture_ceiling = "Textures/ceiling.jpg",
 *filepath_texture_wall = "Textures/wall2.jpg";
 
+
 /*
- 
- Define your filepaths here, please (sorry if it's a bother :') )
- */
+
+Define your filepaths here, please (sorry if it's a bother :') )
+*/
 #endif
 #ifdef JACQUES
 //Shader paths
