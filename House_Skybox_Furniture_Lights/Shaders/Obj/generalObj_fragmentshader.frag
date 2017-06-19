@@ -48,14 +48,16 @@ void main()
 
 vec3 CalcPointLight(vec3 lightpos, vec3 lightCol, vec3 normal, vec3 fragPosition, vec3 viewDir){
 		vec3 lightDir = normalize(lightpos - fragPosition);
+		vec3 halfwayDir = normalize(lightDir + viewDir);
 		float ambient = 0.3f;
 
 		// Diffuse shading
 		float diff = max(dot(normal, lightDir), 0.0);
 		
 		// Specular shading
-		vec3 reflectDir = reflect(-lightDir, normal);
-		float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0f);
+		vec3 reflectDir = normalize(reflect(-lightDir, normal));
+		//float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0f);
+		float spec = pow(max(dot(normal, halfwayDir), 0.0), 32.0f);
 		// Attenuation
 
 		float distance = length(lightpos - fragPosition);
