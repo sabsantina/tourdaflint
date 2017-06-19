@@ -69,9 +69,9 @@ public:
     
     std::vector<glm::vec3> m_padding_points;
     //To be set by the user right here.
-    const GLint m_padding_density = 60;
+    const GLint m_padding_density = 45;
     //To be set by the user right here
-    const GLfloat m_padding_radius = 2.5f;
+    const GLfloat m_padding_radius = 0.25f;
     
     //Constructor with vectors
     Camera(glm::vec3 position_point = glm::vec3(0.0f, 0.0f, 0.0f),
@@ -113,143 +113,61 @@ public:
     
     void initializePadding()
     {
-//        std::cout   << "Position:\n"
-//        << "X:\t" << m_position_point.x << std::endl
-//        << "Y:\t" << m_position_point.y << std::endl
-//        << "Z:\t" << m_position_point.z << std::endl
-//        << std::endl;
-
         
+        //Project the points forward
+        glm::vec3 direction_vector = this->m_front_vector - this->m_position_point;
+        GLfloat sub_angle_rad = glm::radians(45.0f);
         for (int index = 0; index < this->m_padding_density; index++)
         {
-            glm::vec3 temp((cos(index * 2 * M_PI / m_padding_density) * m_padding_radius + m_position_point.x),
-                           0.0f,
-                           sin(index * 2 * M_PI / m_padding_density) * m_padding_radius + m_position_point.z);
-            m_padding_points.push_back(temp);
-//            std::cout   << "Padding\n"
-//            << "X:\t" << m_padding_points[index].x << std::endl
-//            //            << "Y:\t" << m_padding_points[pad].y << std::endl
-//            << "Z:\t" << m_padding_points[index].z << std::endl
-//            << std::endl;
+            GLfloat sub_angle = (index/this->m_padding_density) * sub_angle_rad;
+            
+            GLfloat x = this->m_position_point.x + this->m_padding_radius * (sin(sub_angle) * direction_vector.x + (1 - cos(sub_angle)) * (this->m_right_vector.x));
+            GLfloat z = this->m_position_point.z + this->m_padding_radius * (sin(sub_angle) * direction_vector.z + (1 - cos(sub_angle)) * (this->m_right_vector.z));
+            
+            this->m_padding_points.push_back(glm::vec3(x, 4.0f, z));
+        }
 
+        //Now invert the direction vector to project the points backwards
+        sub_angle_rad = glm::radians(45.0f);
+        for (int index = m_padding_density; index < 2 * m_padding_density; index++)
+        {
+            GLfloat sub_angle = (index/this->m_padding_density) * sub_angle_rad;
+            
+            GLfloat x = this->m_position_point.x + this->m_padding_radius * (sin(sub_angle) * -direction_vector.x + (1 - cos(sub_angle)) * (this->m_right_vector.x));
+            GLfloat z = this->m_position_point.z + this->m_padding_radius * (sin(sub_angle) * -direction_vector.z + (1 - cos(sub_angle)) * (this->m_right_vector.z));
+            
+            this->m_padding_points.push_back(glm::vec3(x, 4.0f, z));
         }
         
-        return;
-
-        //I've been trying to make the padding points move with respect to where the user's looking but my knowlegde of geometry isn't good enough :/
-        
-        
-//        //The difference between each angle for a given side will be pi / 4 divided by half the number of total padding points
-//        GLfloat angle_step = (M_PI / 4.0f) / (this->m_padding_density / 2.0f);
-//        glm::vec3 temp(1.0f, 0.0f, 0.0f);
-//        for (int pad = 0; pad < this->m_padding_density / 2; pad++)
-//        {
-//            //u dot v = |u||v|cos theta = u_x*v_x + u_z*v_z
-//            //v = v2 - v1, v1 = m_position_point, therefore v + v1 = v2 = pad point
-//            //u = m_front_vector, v = temp(1, 0, 0), length will be 1, obvi
-//            //|u| = sqrt(coordinates), |v| = radius
-//            //We want to project the pad forward and backward in a 45 degree arc, respectively.
-//            GLfloat length_u = sqrt(m_front_vector.x * m_front_vector.x
-//                                    + m_front_vector.z * m_front_vector.z);
-//            GLfloat length_v = sqrt(temp.x * temp.x
-//                                    + temp.z * temp.z);
-//            GLfloat sum_uv = m_front_vector.x * temp.x + m_front_vector.z * temp.z;
-//            GLfloat cos_theta = sum_uv / (length_u * length_v);
-//            GLfloat angle_offset = acos(cos_theta);
-//            
-//            GLfloat angle_DEG = angle_step * pad + angle_offset - (M_PI / 8.0f);
-//            glm::vec3 padding_point(m_padding_radius * cos(angle_DEG),
-//                                    0.0f,
-//                                    m_padding_radius * sin(angle_DEG));
-//            padding_point += this->m_position_point;
-//            this->m_padding_points.push_back(padding_point);
-//
-//            angle_DEG += M_PI;
-//            glm::vec3 padding_point2(m_padding_radius * cos(angle_DEG),
-//                                    0.0f,
-//                                    m_padding_radius * sin(angle_DEG));
-//            padding_point2 += this->m_position_point;
-//            this->m_padding_points.push_back(padding_point2);
-//
-//            
-////            std::cout   << "Padding\n"
-////            << "X:\t" << m_padding_points[pad].x << std::endl
-//////            << "Y:\t" << m_padding_points[pad].y << std::endl
-////            << "Z:\t" << m_padding_points[pad].z << std::endl
-////            << std::endl;
-//        }
     }
     
     void updatePadding()
     {
         
-        for (int index = 0; index < this->m_padding_points.size(); index++)
+        //Project the points forward
+        glm::vec3 direction_vector = this->m_front_vector - this->m_position_point;
+        GLfloat sub_angle_rad = glm::radians(45.0f);
+        for (int index = 0; index < this->m_padding_density; index++)
         {
-            glm::vec3 temp((cos(index * 2 * M_PI / m_padding_density) * m_padding_radius + m_position_point.x),
-                           0.0f,
-                           (sin(index * 2 * M_PI / m_padding_density) * m_padding_radius + m_position_point.z));
-            m_padding_points[index] = temp;
-//            std::cout   << "Padding\n"
-//            << "X:\t" << m_padding_points[index].x << std::endl
-//            //            << "Y:\t" << m_padding_points[pad].y << std::endl
-//            << "Z:\t" << m_padding_points[index].z << std::endl
-//            << std::endl;
+            GLfloat sub_angle = (index/this->m_padding_density) * sub_angle_rad;
+            
+            GLfloat x = this->m_position_point.x + this->m_padding_radius * (sin(sub_angle) * direction_vector.x + (1 - cos(sub_angle)) * (this->m_right_vector.x));
+            GLfloat z = this->m_position_point.z + this->m_padding_radius * (sin(sub_angle) * -direction_vector.z + (1 - cos(sub_angle)) * (this->m_right_vector.z));
+            
+            this->m_padding_points[index] = glm::vec3(x, 4.0f, z);
         }
-        return;
-        //I've been trying to make the padding points move with respect to where the user's looking but my knowlegde of geometry isn't good enough :/
         
-//        std::cout << "Updating padding...\n";
-//        std::cout << "Forward vector:\n"
-//        << "X:\t" << this->m_front_vector.x << std::endl
-////        << "Y:\t" << this->m_front_vector.y << std::endl
-//        << "Z:\t" << this->m_front_vector.z << std::endl;
-//        //The difference between each angle for a given side will be pi / 4 divided by half the number of total padding points
-//        GLfloat angle_step = (M_PI / 4.0f) / (this->m_padding_density / 2.0f);
-//        glm::vec3 temp(1.0f, 0.0f, 0.0f);
-//        for (int pad = 0; pad < this->m_padding_density / 2.0f; pad++)
-//        {
-//            //u dot v = |u||v|cos theta = u_x*v_x + u_z*v_z
-//            //v = v2 - v1, v1 = m_position_point, therefore v + v1 = v2 = pad point
-//            //u = m_front_vector, v = temp(1, 0, 0), length will be 1, obvi
-//            //|u| = sqrt(coordinates), |v| = radius
-//            //We want to project the pad forward and backward in a 45 degree arc, respectively.
-//            GLfloat length_u = sqrt(m_front_vector.x * m_front_vector.x
-//                                    + m_front_vector.z * m_front_vector.z);
-//            GLfloat length_v = sqrt(temp.x * temp.x
-//                                    + temp.z * temp.z);
-//            GLfloat sum_uv = m_front_vector.x * temp.x + m_front_vector.z * temp.z;
-//            GLfloat cos_theta = sum_uv / (length_u * length_v);
-//            GLfloat angle_offset = acos(cos_theta);
-//            
-//            GLfloat angle_DEG = angle_step * pad + angle_offset - (M_PI / 8.0f);
-//            glm::vec3 padding_point(m_padding_radius * cos(angle_DEG),
-//                                    0.0f,
-//                                    m_padding_radius * sin(angle_DEG));
-//            padding_point += this->m_position_point;
-//            this->m_padding_points[2 * pad] = padding_point;
-//            
-//            std::cout   << "Padding\n"
-//            << "X:\t" << m_padding_points[2 * pad].x << std::endl
-//            //                        << "Y:\t" << m_padding_points[pad].y << std::endl
-//            << "Z:\t" << m_padding_points[2 * pad].z << std::endl
-//            << std::endl;
-//            
-//            std::cout << "Angle: " << angle_DEG << std::endl;
-//            
-//            angle_DEG += M_PI;
-//            glm::vec3 padding_point2(m_padding_radius * cos(angle_DEG),
-//                                     0.0f,
-//                                     m_padding_radius * sin(angle_DEG));
-//            padding_point2 += this->m_position_point;
-//            this->m_padding_points[2 * pad + 1] = padding_point2;
-//            
-//            std::cout   << "Padding\n"
-//            << "X:\t" << m_padding_points[2 * pad + 1].x << std::endl
-//            //                        << "Y:\t" << m_padding_points[pad].y << std::endl
-//            << "Z:\t" << m_padding_points[2 * pad + 1].z << std::endl
-//            << std::endl;
-//            std::cout << "Angle: " << angle_DEG << std::endl;
-//        }
+        //Now invert the direction vector to project the points backwards
+        sub_angle_rad = glm::radians(45.0f);
+        for (int index = this->m_padding_density; index < this->m_padding_points.size(); index++)
+        {
+            GLfloat sub_angle = (index/this->m_padding_density) * sub_angle_rad;
+            
+            GLfloat x = this->m_position_point.x + this->m_padding_radius * (sin(sub_angle) * -direction_vector.x + (1 - cos(sub_angle)) * (this->m_right_vector.x));
+            GLfloat z = this->m_position_point.z + this->m_padding_radius * (sin(sub_angle) * -direction_vector.z + (1 - cos(sub_angle)) * (this->m_right_vector.z));
+            
+            this->m_padding_points[index] = glm::vec3(x, 4.0f, z);
+        }
     }
     
     //Returns the view matrix calculated using Eular Angles and the LookAt matrix
