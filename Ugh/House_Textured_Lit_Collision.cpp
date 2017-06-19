@@ -1247,30 +1247,31 @@ void transformModelObject(int index)
 		//Use right vector move object right or left
 		//This allows us to no longer rely on knowing the direction z and x 
 		//Which I find can be confusing
+		glm::vec3 new_position
 		if (keys[GLFW_KEY_UP])//translate object towards z-
 		{
-			scene_objects[index].m_position += direction*increaseValue;
+			new_position = direction*increaseValue;
 		}
 		if (keys[GLFW_KEY_DOWN])//translate object towards z+
 		{
-			scene_objects[index].m_position -= direction*increaseValue;
+			new_position = direction*-increaseValue;
 		}
 		if (keys[GLFW_KEY_LEFT])//translate object towards x-
 		{
-			scene_objects[index].m_position -= right*increaseValue;
+			new_position = right*-increaseValue;
 		}
 		if (keys[GLFW_KEY_RIGHT])//translate object towards x+
 		{
-			scene_objects[index].m_position += right*increaseValue;
+			new_position = right*increaseValue;
 		}
 		//This is fine since camera position and target won't affect this
 		if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_UP])//translate object towards y+
 		{
-			scene_objects[index].m_position += glm::vec3(0.0f, increaseValue, 0.0f);
+			new_position = glm::vec3(0.0f, increaseValue, 0.0f);
 		}
 		if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_DOWN])//translate object towards y-
 		{
-			scene_objects[index].m_position += glm::vec3(0.0f, -increaseValue, 0.0f);
+			new_position = glm::vec3(0.0f, -increaseValue, 0.0f);
 		}
 		//This is not a very good way to do this 
 		//Since its hard to tell which way z and x axis are 
@@ -1302,7 +1303,7 @@ void transformModelObject(int index)
 		*/
         //verify the new position to ensure it isn't colliding with any other objects
         //If the provided position falls within any bounding box...
-        if (falls_within_any_boundingbox(new_position))
+        if (falls_within_any_boundingbox(scene_objects[index].m_position+new_position))
         {
             //...stop the translation
             return;
