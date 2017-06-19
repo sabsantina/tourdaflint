@@ -84,6 +84,7 @@ const float DOOR_HEIGHT = 2.7f;
 const float DOOR_WIDTH = 3.0f;
 const float WINDOW_HEIGHT = 2.7f;
 const float WINDOW_WIDTH = 5.0f;
+const float WINDOW2_WIDTH = 10.0f;
 
 //Global vector positions for lights (for moving them in place)
 glm::vec3 firstLightPos;
@@ -404,55 +405,67 @@ int main()
     
     //NOTE: 0,0 coordinate is at the top left corner of the plan drawing
     
-    vector<glm::vec3> wall_position = {
-        //Inner Wall LONG
-        glm::vec3((HOUSE_SIZE - (DOOR_WIDTH + 3.0f)) / 2.0f, WALL_HEIGHT,HOUSE_SIZE / 2.0f),
-        glm::vec3(HOUSE_SIZE - 3.0f - DOOR_WIDTH / 2.0f, DOOR_HEIGHT * 2 + 0.3f, HOUSE_SIZE / 2.0f),
-        glm::vec3(HOUSE_SIZE - 1.5f,WALL_HEIGHT, HOUSE_SIZE / 2.0f),
-        //Inner Wall SHORT
-        glm::vec3(HOUSE_SIZE / 2.0f, WALL_HEIGHT,(HOUSE_SIZE / 2.0f - (DOOR_WIDTH + 3.0f)) / 2.0f),
-        glm::vec3(HOUSE_SIZE / 2.0f, DOOR_HEIGHT * 2 + 0.3f, HOUSE_SIZE / 2.0f - 3.0f - DOOR_WIDTH / 2.0f),
-        glm::vec3(HOUSE_SIZE / 2.0f,WALL_HEIGHT, HOUSE_SIZE / 2.0f - 1.5f),
-        //OUTER WALLS
-        glm::vec3(0.0f, WALL_HEIGHT, HOUSE_SIZE / 2.0f), //WEST
-        //glm::vec3(HOUSE_SIZE / 2.0f, WALL_HEIGHT,0.0f), //NORTH
-        glm::vec3((HOUSE_SIZE - (WINDOW_WIDTH + 5.0f)) / 2.0f, WALL_HEIGHT,0.0f),
-        glm::vec3(HOUSE_SIZE - 5.0f - WINDOW_WIDTH / 2.0f, WINDOW_HEIGHT * 2 + 0.3f, 0.0f),
-        glm::vec3(HOUSE_SIZE - 5.0f - WINDOW_WIDTH / 2.0f, 0.8f, 0.0f),
-        glm::vec3(HOUSE_SIZE - 2.5f,WALL_HEIGHT, 0.0f),
-        
-        glm::vec3(HOUSE_SIZE, WALL_HEIGHT,HOUSE_SIZE / 2.0f),//EAST
-        glm::vec3(HOUSE_SIZE / 2.0f, WALL_HEIGHT,HOUSE_SIZE)//SOUTH
-    };
-    
-    vector<glm::vec3> wall_sizes = {
-        //Inner Wall LONG
-        glm::vec3((HOUSE_SIZE - (DOOR_WIDTH + 3.0f)) / 2.0f,WALL_HEIGHT, WALL_WIDTH),
-        glm::vec3(DOOR_WIDTH / 2.0f,(WALL_HEIGHT - DOOR_HEIGHT),WALL_WIDTH),
-        glm::vec3(3.0f / 2.0f, WALL_HEIGHT, WALL_WIDTH),
-        //Inner Wall SHORT
-        glm::vec3((HOUSE_SIZE / 2.0f - (DOOR_WIDTH + 3.0f)) / 2.0f,WALL_HEIGHT, WALL_WIDTH),
-        glm::vec3(DOOR_WIDTH / 2.0f,(WALL_HEIGHT - DOOR_HEIGHT),WALL_WIDTH),
-        glm::vec3(3.0f / 2.0f, WALL_HEIGHT, WALL_WIDTH),
-        //OUTER WALLS
-        glm::vec3(HOUSE_SIZE / 2.0f,WALL_HEIGHT,WALL_WIDTH), //WEST
-        //glm::vec3(HOUSE_SIZE / 2.0f,WALL_HEIGHT,WALL_WIDTH), //NORTH
-        glm::vec3((HOUSE_SIZE - (WINDOW_WIDTH + 5.0f)) / 2.0f,WALL_HEIGHT, WALL_WIDTH),
-        glm::vec3(WINDOW_WIDTH / 2.0f,(WALL_HEIGHT - WINDOW_HEIGHT),WALL_WIDTH),
-        glm::vec3(WINDOW_WIDTH / 2.0f,0.8f,WALL_WIDTH),
-        glm::vec3(5.0f / 2.0f, WALL_HEIGHT, WALL_WIDTH),
-        
-        glm::vec3(HOUSE_SIZE / 2.0f,WALL_HEIGHT,WALL_WIDTH), //EAST
-        glm::vec3(HOUSE_SIZE / 2.0f,WALL_HEIGHT,WALL_WIDTH)  //SOUTH
-    };
-    vector<float> wall_angles = {
-        0.0f, 0.0f, 0.0f,
-        90.0f,90.0f,90.0f,
-        90.0f, //WEST
-        0.0f,0.0f,0.0f,0.0f, //NORTH
-        90.0f,//EAST
-        0.0f, //SOUTH
-    };
+ 	vector<glm::vec3> wall_position = {
+		//Inner Wall LONG
+		glm::vec3((HOUSE_SIZE - (DOOR_WIDTH + 3.0f)) / 2.0f, WALL_HEIGHT,HOUSE_SIZE / 2.0f),
+		glm::vec3(HOUSE_SIZE - 3.0f - DOOR_WIDTH / 2.0f, DOOR_HEIGHT * 2 + 0.3f, HOUSE_SIZE / 2.0f),
+		glm::vec3(HOUSE_SIZE - 1.5f,WALL_HEIGHT, HOUSE_SIZE / 2.0f),
+		//Inner Wall SHORT
+		glm::vec3(HOUSE_SIZE / 2.0f, WALL_HEIGHT,(HOUSE_SIZE / 2.0f - (DOOR_WIDTH + 3.0f)) / 2.0f),
+		glm::vec3(HOUSE_SIZE / 2.0f, DOOR_HEIGHT * 2 + 0.3f, HOUSE_SIZE / 2.0f - 3.0f - DOOR_WIDTH / 2.0f),
+		glm::vec3(HOUSE_SIZE / 2.0f,WALL_HEIGHT, HOUSE_SIZE / 2.0f - 1.5f),
+		//OUTER WALLS
+		//glm::vec3(0.0f, WALL_HEIGHT, HOUSE_SIZE / 2.0f), //EAST
+		glm::vec3(0.0f, WALL_HEIGHT,((HOUSE_SIZE - (WINDOW2_WIDTH + 2.5f)) / 2.0f)+ WINDOW2_WIDTH + 2.5f),
+		glm::vec3(0.0f, WINDOW_HEIGHT * 2 + 0.3f, 2.5f + WINDOW2_WIDTH / 2.0f),
+		glm::vec3(0.0f, 0.8f, 2.5f + WINDOW2_WIDTH / 2.0f),
+		glm::vec3(0.0f, WALL_HEIGHT, 2.5f/2.0f),
+
+		//glm::vec3(HOUSE_SIZE / 2.0f, WALL_HEIGHT,0.0f), //NORTH
+		glm::vec3((HOUSE_SIZE - (WINDOW_WIDTH + 5.0f)) / 2.0f, WALL_HEIGHT,0.0f),
+		glm::vec3(HOUSE_SIZE - 5.0f - WINDOW_WIDTH / 2.0f, WINDOW_HEIGHT * 2 + 0.3f, 0.0f),
+		glm::vec3(HOUSE_SIZE - 5.0f - WINDOW_WIDTH / 2.0f, 0.8f, 0.0f),
+		glm::vec3(HOUSE_SIZE - 2.5f,WALL_HEIGHT, 0.0f),
+
+		glm::vec3(HOUSE_SIZE, WALL_HEIGHT,HOUSE_SIZE / 2.0f),//WEST
+		glm::vec3(HOUSE_SIZE / 2.0f, WALL_HEIGHT,HOUSE_SIZE)//SOUTH
+	};
+
+	vector<glm::vec3> wall_sizes = {
+		//Inner Wall LONG
+		glm::vec3((HOUSE_SIZE - (DOOR_WIDTH + 3.0f)) / 2.0f,WALL_HEIGHT, WALL_WIDTH),
+		glm::vec3(DOOR_WIDTH / 2.0f,(WALL_HEIGHT - DOOR_HEIGHT),WALL_WIDTH),
+		glm::vec3(3.0f / 2.0f, WALL_HEIGHT, WALL_WIDTH),
+		//Inner Wall SHORT
+		glm::vec3((HOUSE_SIZE / 2.0f - (DOOR_WIDTH + 3.0f)) / 2.0f,WALL_HEIGHT, WALL_WIDTH),
+		glm::vec3(DOOR_WIDTH / 2.0f,(WALL_HEIGHT - DOOR_HEIGHT),WALL_WIDTH),
+		glm::vec3(3.0f / 2.0f, WALL_HEIGHT, WALL_WIDTH),
+		//OUTER WALLS
+		//glm::vec3(HOUSE_SIZE / 2.0f,WALL_HEIGHT,WALL_WIDTH), //EAST
+		glm::vec3((HOUSE_SIZE - (WINDOW2_WIDTH + 2.5f)) / 2.0f,WALL_HEIGHT, WALL_WIDTH),
+		glm::vec3(WINDOW2_WIDTH / 2.0f,(WALL_HEIGHT - WINDOW_HEIGHT),WALL_WIDTH),
+		glm::vec3(WINDOW2_WIDTH / 2.0f,0.8f,WALL_WIDTH),
+		glm::vec3(2.5f / 2.0f, WALL_HEIGHT, WALL_WIDTH),
+
+		//glm::vec3(HOUSE_SIZE / 2.0f,WALL_HEIGHT,WALL_WIDTH), //NORTH
+		glm::vec3((HOUSE_SIZE - (WINDOW_WIDTH + 5.0f)) / 2.0f,WALL_HEIGHT, WALL_WIDTH),
+		glm::vec3(WINDOW_WIDTH / 2.0f,(WALL_HEIGHT - WINDOW_HEIGHT),WALL_WIDTH),
+		glm::vec3(WINDOW_WIDTH / 2.0f,0.8f,WALL_WIDTH),
+		glm::vec3(5.0f / 2.0f, WALL_HEIGHT, WALL_WIDTH),
+
+		glm::vec3(HOUSE_SIZE / 2.0f,WALL_HEIGHT,WALL_WIDTH), //WEST
+
+		glm::vec3(HOUSE_SIZE / 2.0f,WALL_HEIGHT,WALL_WIDTH)  //SOUTH
+	};
+
+	vector<float> wall_angles = {
+		0.0f, 0.0f, 0.0f,
+		90.0f,90.0f,90.0f,
+		90.0f, 90.0f,90.0f,90.0f,//EAST
+		0.0f,0.0f,0.0f,0.0f, //NORTH
+		90.0f,//WEST
+		0.0f, //SOUTH
+	};
     
     //For cube used for wall
     std::vector<glm::vec3> vertices;
@@ -624,25 +637,37 @@ int main()
         
         glDepthMask(GL_TRUE);
         
-        //For lamps
-        lampShader.Use();
-        glBindVertexArray(VAO_L);
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.program, "view_matrix"), 1, GL_FALSE, glm::value_ptr(view_matrix));
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.program, "projection_matrix"), 1, GL_FALSE, glm::value_ptr(projection_matrix));
-        //Lamp 1: Kitchen
-        glm::mat4 lamp_shift = glm::translate(model_matrix, firstLightPos);
-        glm::mat4 lamp_size = glm::scale(model_matrix, glm::vec3(0.15f));
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.program, "model_matrix"), 1, GL_FALSE, glm::value_ptr(model_matrix*lamp_shift*lamp_size));
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        //Lamp 2: Living Room
-        lamp_shift = glm::translate(model_matrix, secondLightPos);
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.program, "model_matrix"), 1, GL_FALSE, glm::value_ptr(model_matrix*lamp_shift*lamp_size));
-        glDrawArrays(GL_TRIANGLES, 0, 36);
-        //Lamp 3: Bedroom
-        lamp_shift = glm::translate(model_matrix, thirdLightPos);
-        lamp_size = glm::scale(model_matrix, glm::vec3(0.07f));
-        glUniformMatrix4fv(glGetUniformLocation(lampShader.program, "model_matrix"), 1, GL_FALSE, glm::value_ptr(model_matrix*lamp_shift*lamp_size));
-        glDrawArrays(GL_TRIANGLES, 0, 36);
+		//For lamps
+		lampShader.Use();
+		glBindVertexArray(VAO_L);
+		glUniformMatrix4fv(glGetUniformLocation(lampShader.program, "view_matrix"), 1, GL_FALSE, glm::value_ptr(view_matrix));
+		glUniformMatrix4fv(glGetUniformLocation(lampShader.program, "projection_matrix"), 1, GL_FALSE, glm::value_ptr(projection_matrix));
+		//Lamp 1: Kitchen
+		glm::mat4 lamp_shift = glm::translate(model_matrix, firstLightPos);
+		glm::mat4 lamp_size = glm::scale(model_matrix, glm::vec3(0.15f));
+		if(firstLightON)
+			glUniform3fv(glGetUniformLocation(lampShader.program, "lamp_color"), 1, glm::value_ptr(glm::vec3(1.0f)));
+		else
+			glUniform3fv(glGetUniformLocation(lampShader.program, "lamp_color"), 1, glm::value_ptr(glm::vec3(0.0f)));
+		glUniformMatrix4fv(glGetUniformLocation(lampShader.program, "model_matrix"), 1, GL_FALSE, glm::value_ptr(model_matrix*lamp_shift*lamp_size));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+		//Lamp 2: Living Room
+		lamp_shift = glm::translate(model_matrix, secondLightPos);
+		glUniformMatrix4fv(glGetUniformLocation(lampShader.program, "model_matrix"), 1, GL_FALSE, glm::value_ptr(model_matrix*lamp_shift*lamp_size));
+		if (secondLightON)
+			glUniform3fv(glGetUniformLocation(lampShader.program, "lamp_color"), 1, glm::value_ptr(glm::vec3(1.0f)));
+		else
+			glUniform3fv(glGetUniformLocation(lampShader.program, "lamp_color"), 1, glm::value_ptr(glm::vec3(0.0f)));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
+		//Lamp 3: Bedroom
+		lamp_shift = glm::translate(model_matrix, thirdLightPos);
+		lamp_size = glm::scale(model_matrix, glm::vec3(0.07f));
+		if (thirdLightON)
+			glUniform3fv(glGetUniformLocation(lampShader.program, "lamp_color"), 1, glm::value_ptr(glm::vec3(1.0f)));
+		else
+			glUniform3fv(glGetUniformLocation(lampShader.program, "lamp_color"), 1, glm::value_ptr(glm::vec3(0.0f)));
+		glUniformMatrix4fv(glGetUniformLocation(lampShader.program, "model_matrix"), 1, GL_FALSE, glm::value_ptr(model_matrix*lamp_shift*lamp_size));
+		glDrawArrays(GL_TRIANGLES, 0, 36);
         
         
         //FLOOR/CEILING
@@ -686,18 +711,26 @@ int main()
             glDrawArrays(GL_TRIANGLES, 0, 36);
         }
         
-        //Window
-        windowShader.Use();
-        glUniformMatrix4fv(glGetUniformLocation(windowShader.program, "view_matrix"), 1, GL_FALSE, glm::value_ptr(view_matrix));
-        glUniformMatrix4fv(glGetUniformLocation(windowShader.program, "projection_matrix"), 1, GL_FALSE, glm::value_ptr(projection_matrix));
-        glBindVertexArray(VAO_W);
-        glUniform3fv(glGetUniformLocation(windowShader.program, "object_color"), 1, glm::value_ptr(glm::vec3(0.8f)));
-        glUniform1f(glGetUniformLocation(windowShader.program, "alpha"), 0.5f);
-        glm::mat4 shift = glm::translate(model_matrix, glm::vec3(HOUSE_SIZE - 5.0f - WINDOW_WIDTH / 2.0f, WINDOW_HEIGHT, 0.0f));
-        glm::mat4 window_rotator = glm::rotate(model_matrix, glm::radians(90.0f), glm::vec3(0, 0, 1));
-        glm::mat4 window_sizing = glm::scale(model_matrix, glm::vec3(WINDOW_HEIGHT, WINDOW_WIDTH, 1.0f));
-        glUniformMatrix4fv(glGetUniformLocation(windowShader.program, "model_matrix"), 1, GL_FALSE, glm::value_ptr(model_matrix*shift*window_rotator*window_sizing));
-        glDrawArrays(GL_TRIANGLES, 0, 3 * 2);
+ 		//Window
+		windowShader.Use();
+		glUniformMatrix4fv(glGetUniformLocation(windowShader.program, "view_matrix"), 1, GL_FALSE, glm::value_ptr(view_matrix));
+		glUniformMatrix4fv(glGetUniformLocation(windowShader.program, "projection_matrix"), 1, GL_FALSE, glm::value_ptr(projection_matrix));
+		glBindVertexArray(VAO_W);
+		glUniform3fv(glGetUniformLocation(windowShader.program, "object_color"), 1, glm::value_ptr(glm::vec3(0.8f)));
+		glUniform1f(glGetUniformLocation(windowShader.program, "alpha"), 0.5f);
+		//Window 1: In living room
+		glm::mat4 shift = glm::translate(model_matrix, glm::vec3(HOUSE_SIZE - 5.0f - WINDOW_WIDTH / 2.0f, WINDOW_HEIGHT, 0.0f));
+		glm::mat4 window_rotator = glm::rotate(model_matrix, glm::radians(90.0f), glm::vec3(0, 0, 1));
+		glm::mat4 window_sizing = glm::scale(model_matrix, glm::vec3(WINDOW_HEIGHT, WINDOW_WIDTH, 1.0f));
+		glUniformMatrix4fv(glGetUniformLocation(windowShader.program, "model_matrix"), 1, GL_FALSE, glm::value_ptr(model_matrix*shift*window_rotator*window_sizing));
+		glDrawArrays(GL_TRIANGLES, 0, 3 * 2);
+		//Window 2: in Kitchen
+		shift = glm::translate(model_matrix, glm::vec3(0.0f, WINDOW_HEIGHT, 2.5f + WINDOW2_WIDTH / 2.0f));
+		window_rotator = glm::rotate(model_matrix, glm::radians(90.0f), glm::vec3(0, 0, 1));
+		window_rotator = glm::rotate(window_rotator, glm::radians(90.0f), glm::vec3(1, 0, 0));
+		window_sizing = glm::scale(model_matrix, glm::vec3(WINDOW_HEIGHT, WINDOW2_WIDTH, 1.0f));
+		glUniformMatrix4fv(glGetUniformLocation(windowShader.program, "model_matrix"), 1, GL_FALSE, glm::value_ptr(model_matrix*shift*window_rotator*window_sizing));
+		glDrawArrays(GL_TRIANGLES, 0, 3 * 2);
         
         glBindVertexArray(0);
         
@@ -1148,31 +1181,67 @@ void transformModelObject(int index)
     GLfloat increaseValue = 0.1f;
     if (keys[GLFW_KEY_T])
     {
-        glm::vec3 new_position;
-        if (keys[GLFW_KEY_UP] && !keys[GLFW_KEY_RIGHT_SHIFT])//translate object towards z-
-        {
-            new_position = glm::vec3(0.0f, 0.0f, -increaseValue);
-        }
-        if (keys[GLFW_KEY_DOWN] && !keys[GLFW_KEY_RIGHT_SHIFT])//translate object towards z+
-        {
-            new_position = glm::vec3(0.0f, 0.0f, increaseValue);
-        }
-        if (keys[GLFW_KEY_LEFT])//translate object towards x-
-        {
-            new_position = glm::vec3(-increaseValue, 0.0f, 0.0f);
-        }
-        if (keys[GLFW_KEY_RIGHT])//translate object towards x+
-        {
-            new_position = glm::vec3(increaseValue, 0.0f, 0.0f);
-        }
-        if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_UP])//translate object towards y+
-        {
-            new_position = glm::vec3(0.0f, increaseValue, 0.0f);
-        }
-        if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_DOWN])//translate object towards y-
-        {
-            new_position = glm::vec3(0.0f, -increaseValue, 0.0f);
-        }
+  		//Get the direction from the camera to the object
+		glm::vec3 direction = scene_objects[index].m_position - camera.m_position_point;
+		//Get the right direction of the object based on camera direction
+		glm::vec3 right = glm::normalize(glm::cross(direction, glm::vec3(0, 1, 0)));
+		//Use the direction vector to move the object forward and back
+		//Use right vector move object right or left
+		//This allows us to no longer rely on knowing the direction z and x 
+		//Which I find can be confusing
+		if (keys[GLFW_KEY_UP])//translate object towards z-
+		{
+			scene_objects[index].m_position += direction*increaseValue;
+		}
+		if (keys[GLFW_KEY_DOWN])//translate object towards z+
+		{
+			scene_objects[index].m_position -= direction*increaseValue;
+		}
+		if (keys[GLFW_KEY_LEFT])//translate object towards x-
+		{
+			scene_objects[index].m_position -= right*increaseValue;
+		}
+		if (keys[GLFW_KEY_RIGHT])//translate object towards x+
+		{
+			scene_objects[index].m_position += right*increaseValue;
+		}
+		//This is fine since camera position and target won't affect this
+		if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_UP])//translate object towards y+
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, increaseValue, 0.0f);
+		}
+		if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_DOWN])//translate object towards y-
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, -increaseValue, 0.0f);
+		}
+		//This is not a very good way to do this 
+		//Since its hard to tell which way z and x axis are 
+		/*
+		if (keys[GLFW_KEY_UP])//translate object towards z-
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, 0.0f, -increaseValue);
+		}
+		if (keys[GLFW_KEY_DOWN])//translate object towards z+
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, 0.0f, increaseValue);
+		}
+		if (keys[GLFW_KEY_LEFT])//translate object towards x-
+		{
+			scene_objects[index].m_position += glm::vec3(-increaseValue, 0.0f, 0.0f);
+		}
+		if (keys[GLFW_KEY_RIGHT])//translate object towards x+
+		{
+			scene_objects[index].m_position += glm::vec3(increaseValue, 0.0f, 0.0f);
+		}
+		if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_UP])//translate object towards y+
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, increaseValue, 0.0f);
+		}
+		if (keys[GLFW_KEY_RIGHT_SHIFT] && keys[GLFW_KEY_DOWN])//translate object towards y-
+		{
+			scene_objects[index].m_position += glm::vec3(0.0f, -increaseValue, 0.0f);
+		}
+		*/
         //verify the new position to ensure it isn't colliding with any other objects
         //If the provided position falls within any bounding box...
         if (falls_within_any_boundingbox(new_position))
@@ -1493,7 +1562,7 @@ void setUniformsLight(Shader shader) {
     if (firstLightON)
         glUniform3fv(glGetUniformLocation(shader.program, "lightCol1"), 1, glm::value_ptr(glm::vec3(1.0f)));
     else
-        glUniform3fv(glGetUniformLocation(shader.program, "lightCol1"), 1, glm::value_ptr(glm::vec3(0.08f)));
+        glUniform3fv(glGetUniformLocation(shader.program, "lightCol1"), 1, glm::value_ptr(glm::vec3(0.2f)));
     
     //In Living room
     glUniform3fv(glGetUniformLocation(shader.program, "lightPos2"), 1, glm::value_ptr(secondLightPos));
@@ -1507,7 +1576,7 @@ void setUniformsLight(Shader shader) {
     if (thirdLightON)
         glUniform3fv(glGetUniformLocation(shader.program, "lightCol3"), 1, glm::value_ptr(glm::vec3(1.0f)));
     else
-        glUniform3fv(glGetUniformLocation(shader.program, "lightCol3"), 1, glm::value_ptr(glm::vec3(0.08f)));
+        glUniform3fv(glGetUniformLocation(shader.program, "lightCol3"), 1, glm::value_ptr(glm::vec3(0.01f)));
 }
 
 

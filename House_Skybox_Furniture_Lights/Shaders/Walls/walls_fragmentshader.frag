@@ -31,11 +31,17 @@ void main()
 	vec3 normal = normalize(outNormal);
 	vec3 viewDir = normalize(viewPosition - fragPosition);
 
-
-
-	vec3 result1 = CalcPointLight(lightPos1, lightCol1, normal, fragPosition, viewDir);
+	vec3 result1, result3;
+	if(fragPosition.z < 15)
+		result1 = CalcPointLight(lightPos1, lightCol1, normal, fragPosition, viewDir);
+	else
+		result1 = 0.1f * lightCol1;
 	vec3 result2 = CalcPointLight(lightPos2, lightCol2, normal, fragPosition, viewDir);
-	vec3 result3 = CalcPointLight(lightPos3, lightCol3, normal, fragPosition, viewDir);
+	
+	if(fragPosition.z > 15)
+		result3 = CalcPointLight(lightPos3, lightCol3, normal, fragPosition, viewDir);
+	else
+		result3 = 0.1f * lightCol3; 
 
 	vec3 result = (result1+result2+result3)*tex_col;
 
@@ -54,7 +60,7 @@ vec3 CalcPointLight(vec3 lightpos, vec3 lightCol, vec3 normal, vec3 fragPosition
 		vec3 reflectDir = reflect(-lightDir, normal);
 		float spec = pow(max(dot(viewDir, reflectDir), 0.0), shininess);
 		// Attenuation
-
+		
 		float distance = length(lightpos - fragPosition);
 		float attenuation = 1.0f / (1.0f+0.09f*distance + 0.032*(distance*distance));   
 		 
@@ -62,7 +68,7 @@ vec3 CalcPointLight(vec3 lightpos, vec3 lightCol, vec3 normal, vec3 fragPosition
 		vec3 ambient_light = ambient * lightCol;
 		vec3 diffuse_light = diff * lightCol;
 		vec3 specular_light = spec *lightCol;
-
+		
 		return (ambient_light + (diffuse_light + specular_light)*attenuation);
 		
 }
