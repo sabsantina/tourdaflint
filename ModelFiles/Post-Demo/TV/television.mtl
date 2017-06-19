@@ -2,41 +2,42 @@
 ## Alias OBJ Material File
 # Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
 
-newmtl M_0131_Silver
+newmtl _Wood_Cherry_Original_1
 Ka 0.000000 0.000000 0.000000
-Kd 0.752941 0.752941 0.752941
+Kd 0.596078 0.337255 0.164706
 Ks 0.330000 0.330000 0.330000
-
-newmtl Metal_Rough
-Ka 0.000000 0.000000 0.000000
-Kd 0.458824 0.403922 0.235294
-Ks 0.330000 0.330000 0.330000
-map_Kd Dresser_2/Metal_Rough.jpg
-
-newmtl M_0047_Khaki
-Ka 0.000000 0.000000 0.000000
-Kd 0.941176 0.901961 0.549020
-Ks 0.330000 0.330000 0.330000
+map_Kd television/_Wood_Cherry_Original_1.jpg
 
 newmtl FrontColor
 Ka 0.000000 0.000000 0.000000
 Kd 1.000000 1.000000 1.000000
 Ks 0.330000 0.330000 0.330000
 
-newmtl Wood_Board_Cork
+newmtl _Metal_Corrogated_Shiny_2
 Ka 0.000000 0.000000 0.000000
-Kd 0.843137 0.788235 0.450980
+Kd 0.756863 0.756863 0.756863
 Ks 0.330000 0.330000 0.330000
-map_Kd Dresser_2/Wood_Board_Cork.jpg
+map_Kd television/_Metal_Corrogated_Shiny_2.jpg
 
-newmtl Wood_Cherry_Original
+newmtl _8
 Ka 0.000000 0.000000 0.000000
-Kd 0.596078 0.337255 0.164706
+Kd 0.478431 0.478431 0.478431
 Ks 0.330000 0.330000 0.330000
-map_Kd Dresser_2/wood-texture.jpg
+d 0.500000
 
-newmtl Color_C18
+newmtl _5
 Ka 0.000000 0.000000 0.000000
-Kd 0.400000 0.278431 0.156863
+Kd 0.580392 0.580392 0.580392
 Ks 0.330000 0.330000 0.330000
+
+newmtl _4
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Metal_Aluminum_Anodized_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.792157 0.819608 0.858824
+Ks 0.330000 0.330000 0.330000
+map_Kd television/_Metal_Aluminum_Anodized_1.jpg
 

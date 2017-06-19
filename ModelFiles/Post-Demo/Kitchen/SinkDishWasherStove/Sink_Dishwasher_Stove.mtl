@@ -1,0 +1,103 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl _7
+Ka 0.000000 0.000000 0.000000
+Kd 0.549020 0.549020 0.549020
+Ks 0.330000 0.330000 0.330000
+map_Kd Sink_Dishwasher_Stove/_7.jpg
+
+newmtl M_0004_HotPink
+Ka 0.000000 0.000000 0.000000
+Kd 0.239216 0.239216 0.239216
+Ks 0.330000 0.330000 0.330000
+map_Kd Sink_Dishwasher_Stove/M_0004_HotPink.jpg
+
+newmtl _Color_008_1
+Ka 0.000000 0.000000 0.000000
+Kd 0.117647 0.117647 0.117647
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Metal_Corrogated_Shiny_5
+Ka 0.000000 0.000000 0.000000
+Kd 0.219608 0.219608 0.219608
+Ks 0.330000 0.330000 0.330000
+d 0.300000
+map_Kd Sink_Dishwasher_Stove/_Metal_Corrogated_Shiny_5.jpg
+
+newmtl cooktop_metal_black
+Ka 0.000000 0.000000 0.000000
+Kd 0.156863 0.156863 0.156863
+Ks 0.330000 0.330000 0.330000
+
+newmtl cooktop_metal_silver
+Ka 0.000000 0.000000 0.000000
+Kd 0.600000 0.600000 0.600000
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Metal_Corrogated_Shiny_3
+Ka 0.000000 0.000000 0.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.330000 0.330000 0.330000
+map_Kd Sink_Dishwasher_Stove/_Metal_Corrogated_Shiny_3.jpg
+
+newmtl Color_001
+Ka 0.000000 0.000000 0.000000
+Kd 0.886275 0.886275 0.886275
+Ks 0.330000 0.330000 0.330000
+
+newmtl aluminio
+Ka 0.000000 0.000000 0.000000
+Kd 0.729412 0.729412 0.729412
+Ks 0.330000 0.330000 0.330000
+
+newmtl _Metal_Corrogated_Shiny_9
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+map_Kd Sink_Dishwasher_Stove/_Metal_Corrogated_Shiny_9.jpg
+
+newmtl _Metal_Corrogated_Shiny_8
+Ka 0.000000 0.000000 0.000000
+Kd 0.666667 0.666667 0.666667
+Ks 0.330000 0.330000 0.330000
+map_Kd Sink_Dishwasher_Stove/_Metal_Corrogated_Shiny_8.jpg
+
+newmtl Steve_Book1
+Ka 0.000000 0.000000 0.000000
+Kd 0.125490 0.125490 0.129412
+Ks 0.330000 0.330000 0.330000
+map_Kd Sink_Dishwasher_Stove/Steve_Book1.jpg
+
+newmtl _Metal_Corrogated_Shiny_6
+Ka 0.000000 0.000000 0.000000
+Kd 0.756863 0.756863 0.756863
+Ks 0.330000 0.330000 0.330000
+map_Kd Sink_Dishwasher_Stove/_Metal_Corrogated_Shiny_6.jpg
+
+newmtl _Metal_Aluminum_Anodized_2
+Ka 0.000000 0.000000 0.000000
+Kd 0.737255 0.705882 0.658824
+Ks 0.330000 0.330000 0.330000
+map_Kd Sink_Dishwasher_Stove/_Metal_Aluminum_Anodized_2.jpg
+
+newmtl _Metal_Corrogated_Shiny_7
+Ka 0.000000 0.000000 0.000000
+Kd 0.752941 0.752941 0.752941
+Ks 0.330000 0.330000 0.330000
+d 0.300000
+map_Kd Sink_Dishwasher_Stove/_Metal_Corrogated_Shiny_7.jpg
+
+newmtl _Metal_Corrogated_Shiny_4
+Ka 0.000000 0.000000 0.000000
+Kd 0.549020 0.549020 0.549020
+Ks 0.330000 0.330000 0.330000
+map_Kd Sink_Dishwasher_Stove/_Metal_Corrogated_Shiny_4.jpg
+
+newmtl _6
+Ka 0.000000 0.000000 0.000000
+Kd 0.549020 0.549020 0.549020
+Ks 0.330000 0.330000 0.330000
+map_Kd Sink_Dishwasher_Stove/_6.jpg
+

@@ -11,7 +11,7 @@ newmtl ranjang_kayu2
 Ka 0.000000 0.000000 0.000000
 Kd 0.596078 0.337255 0.164706
 Ks 0.330000 0.330000 0.330000
-map_Kd Bed/ranjang_kayu2.jpg
+map_Kd Bed/green-fabric.jpg
 
 newmtl ranjang_kayu1
 Ka 0.000000 0.000000 0.000000

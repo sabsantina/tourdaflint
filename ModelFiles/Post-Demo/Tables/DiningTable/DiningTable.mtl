@@ -6,7 +6,7 @@ newmtl _Color_000_1
 Ka 0.000000 0.000000 0.000000
 Kd 0.447059 0.305882 0.125490
 Ks 0.330000 0.330000 0.330000
-map_Kd DiningTable/_Color_000_1.jpg
+map_Kd DiningTable/wood-texture.jpg
 
 newmtl Color_000
 Ka 0.000000 0.000000 0.000000

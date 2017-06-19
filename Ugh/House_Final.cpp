@@ -346,6 +346,7 @@ void user_select();
 //void updateBoundingBox(int index, glm::vec3 obj_initial_pos, glm::vec3 obj_final_pos);
 bool falls_within_any_boundingbox(glm::vec3 position);
 
+void setTexMultiplier(int);
 void setUniformsLight(Shader shader);
 void moveLight();
 
@@ -810,7 +811,7 @@ int main()
             
             glm::vec3 obj_initial_pos = scene_objects[index].m_position;
             
-            
+            setTexMultiplier(index);
             scene_objects[index].m_objectShader.Use();
             setUniformsLight(scene_objects[index].m_objectShader);
             
@@ -1342,6 +1343,32 @@ void transformModelObject(int index)
         std::cout << std::endl;
     }
 }
+
+void setTexMultiplier(int index)
+{
+	float multiplier;
+	switch (index)
+	{
+	case BED:	
+	case BEDROOM_NIGHTSTAND:
+	case BEDROOM_CHAIR:
+	case BEDROOM_DESK_LAMP:
+	case LIVINGROOM_COFFEETABLE:
+	case LIVINGROOM_COUCH_EAST:
+	case LIVINGROOM_COUCH_NORTH:
+	case LIVINGROOM_LITTLETABLE:
+	case LIVINGROOM_TELEVISION:
+	case LIVINGROOM_TABLELIGHT:
+	case KITCHEN_LAMP:
+		multiplier = 20;
+		break;
+	default:
+		multiplier = 1.0;
+		break;
+	}
+	glUniform1f(glGetUniformLocation(scene_objects[index].m_objectShader.program, "tex_multiplier"), multiplier);
+}
+
 
 void initialize_scene_objects()
 {
