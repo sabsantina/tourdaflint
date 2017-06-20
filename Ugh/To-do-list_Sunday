@@ -1,0 +1,7 @@
+To-do list Sunday
+
+Right, so collision DOES work, only we need to increase the bounding for each individual object - done
+
+We also need to tell the padding to only activate forward when we're going forward and backward when we're going backward - done, I think?
+
+Collisions between objects and walls have been made more responsive; collisions between objects are totally unresponsive.
